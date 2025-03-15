@@ -40,6 +40,7 @@
 &lt;h3&gt;2025.3.15&lt;/h3&gt;
 &lt;p&gt;今天刚回来，就把以前vitepress的文档迁移到fuwari上了，以后就用fuwari来写博客了。&lt;/p&gt;
 &lt;p&gt;准备准备，收尾之后就会上传到github上了，以后就不需要把近期活动写那了。&lt;/p&gt;
+&lt;p&gt;上传并修复了一点小问题。&lt;/p&gt;
 </content:encoded></item><item><title>NumberBridgeWpf</title><link>https://authorzixi.github.io/posts/products/numberbridgewpf/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/numberbridgewpf/</guid><description>NumberBridgeWpf is a Hashiwokakero game</description><pubDate>Thu, 30 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;“简单的”数桥游戏，用&lt;code&gt;C#+wpf&lt;/code&gt;制作。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;2.jpg&quot; alt=&quot;手机版截图&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;使用 MIT LICENSE&lt;/strong&gt;&lt;/p&gt;
