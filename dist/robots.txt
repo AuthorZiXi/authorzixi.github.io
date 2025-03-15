@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://authorzixi.github.io/sitemap-index.xml

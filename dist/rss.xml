@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AuthorZiXi&apos;s Bedroom</title><description>My personal blog</description><link>https://authorzixi.github.io/</link><language>zh_CN</language><item><title>2024 未公开项目的时间表</title><link>https://authorzixi.github.io/posts/today/2024/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/today/2024/</guid><description>2024 未公开项目的时间表</description><pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;24.12.28&lt;/h2&gt;
+&lt;p&gt;AZX.ExtendableFramework （暂不开放）&lt;/p&gt;
+</content:encoded></item><item><title>一些没有提到却在计划或开发的项目</title><link>https://authorzixi.github.io/posts/today/2025/0315/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/today/2025/0315/</guid><description>一些没有提到却在计划或开发的项目</description><pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;:::warning[注意]
+设计大多数在草稿本上设计，基本不会拍照公开。&lt;/p&gt;
+&lt;p&gt;标题中的星号表示将是近期重点开发的项目。&lt;/p&gt;
+&lt;p&gt;在开发中&lt;strong&gt;不代表&lt;/strong&gt;功能完善。&lt;/p&gt;
+&lt;p&gt;作者不会每个周末都有时间开发，没准又在玩。
+:::&lt;/p&gt;
+&lt;h3&gt;ScnScript 场景脚本&lt;/h3&gt;
+&lt;p&gt;基础完成，但是不完善。&lt;/p&gt;
+&lt;h3&gt;StoryMakerZX 故事制作器&lt;/h3&gt;
+&lt;p&gt;更方便去开发VN的剧本。（界面在封面可以看到）
+设置功能有了，目前没有编辑功能。&lt;/p&gt;
+&lt;h3&gt;TheProjectWhiteBoard 项目白板&lt;/h3&gt;
+&lt;p&gt;还在设计阶段，预计功能强大丰富。&lt;/p&gt;
+&lt;h3&gt;TinySystem 微系统&lt;/h3&gt;
+&lt;p&gt;在开发中，在整细琐的东西。(不是，2021年开始设计的，到现在都多久了？拖更王是得是你啊！)&lt;/p&gt;
+&lt;h3&gt;TideFile 潮汐文件管理器(原名：Explorer24)&lt;/h3&gt;
+&lt;p&gt;在设计中，计划替代DirectoryOpus。&lt;/p&gt;
+&lt;h3&gt;TideZip 汐压缩&lt;/h3&gt;
+&lt;p&gt;在设计中，计划替代Bandizip。&lt;/p&gt;
+</content:encoded></item><item><title>2025 未公开项目的时间表</title><link>https://authorzixi.github.io/posts/today/2025/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/today/2025/</guid><description>2025 未公开项目的时间表</description><pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;2025.1.1&lt;/h3&gt;
+&lt;p&gt;函数显示器（没有编辑功能，基于Canvas实现） 不开放源代码，写的太烂了，没实际功能 &lt;a href=&quot;https://orangenew24.lanzouq.com/isCvI2jkl41i&quot;&gt;【蓝奏 下载】&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;2025.1.17&lt;/h3&gt;
+&lt;p&gt;Unity控件拖拽功能实现（没多大技术含量&lt;/p&gt;
+&lt;h3&gt;2025.1.19&lt;/h3&gt;
+&lt;p&gt;TinySystem.Module.Config 全部改为字符串值而非object类型&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;2025-01-19_1.png&quot; alt=&quot;截图&quot; /&gt;&lt;/p&gt;
+&lt;h3&gt;2025.2.11&lt;/h3&gt;
+&lt;p&gt;TranslationTool 翻译工具（未开放）&lt;/p&gt;
+&lt;h3&gt;2025.2.15&lt;/h3&gt;
+&lt;p&gt;开学刚回来没多久，先把落叶文档关了。未来可能会准备一个新的网站界面，敬请期待。&lt;/p&gt;
+&lt;p&gt;为什么把落叶文档关了？&lt;/p&gt;
+&lt;p&gt;维护成本太高昂了（是代码编辑上及文档上的编辑太费时间了），内部使用的vitepress及pagefind等插件好久没有更新了。打算采用其他技术整一个更好的静态网站。&lt;/p&gt;
+&lt;p&gt;而且太久没有更新了，而且不可能继续使用“茶红落叶”这么长的英文名了，实在太长了。&lt;/p&gt;
+&lt;p&gt;而且早在最近更新在24年5月之后，况且目前这个名字很早之后就决定了。只是因为一些原因没改。&lt;/p&gt;
+&lt;p&gt;也许一切都只是在为未来做铺垫，敬请期待！&lt;/p&gt;
+&lt;h3&gt;2025.3.8&lt;/h3&gt;
+&lt;p&gt;开始使用fuwari来制作博客，相比于写文档vitepress，肯定是更方便的。&lt;/p&gt;
+&lt;h3&gt;2025.3.15&lt;/h3&gt;
+&lt;p&gt;今天刚回来，就把以前vitepress的文档迁移到fuwari上了，以后就用fuwari来写博客了。&lt;/p&gt;
+&lt;p&gt;准备准备，收尾之后就会上传到github上了，以后就不需要把近期活动写那了。&lt;/p&gt;
+</content:encoded></item><item><title>NumberBridgeWpf</title><link>https://authorzixi.github.io/posts/products/numberbridgewpf/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/numberbridgewpf/</guid><description>NumberBridgeWpf is a Hashiwokakero game</description><pubDate>Thu, 30 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;“简单的”数桥游戏，用&lt;code&gt;C#+wpf&lt;/code&gt;制作。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;2.jpg&quot; alt=&quot;手机版截图&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;使用 MIT LICENSE&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;::github{repo=&quot;AuthorZiXi/NumberBridgeWpf&quot;}&lt;/p&gt;
+&lt;h2&gt;项目组成&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;NumberBridge : 核心游戏逻辑，包括地图生成，桥梁连接，相关判断&lt;/li&gt;
+&lt;li&gt;NumberbridgeConsole : 地图生成测试，无游戏功能&lt;/li&gt;
+&lt;li&gt;NumberBridgeWpf : 游戏程序，交互与地图转换&lt;/li&gt;
+&lt;li&gt;NumberBridgeAvalonia : NumberBridgeWpf 的 Avalonia 版本
+&lt;ul&gt;
+&lt;li&gt;NumberBridgeAvalonia.Desktop : 桌面版&lt;/li&gt;
+&lt;li&gt;NumberBridgeAvalonia.Android : Android 移动版&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;:::warning[注意]
+PutGame.cs 在 &lt;code&gt;NumberBridgeWpf&lt;/code&gt; 是将地图数据转换成控件交互的方法类，但 &lt;code&gt;NumberbridgeConsole&lt;/code&gt; 是地图转换成控制台文本的方法类
+:::&lt;/p&gt;
+&lt;h2&gt;开发历程与心得&lt;/h2&gt;
+&lt;h3&gt;一切的开始&lt;/h3&gt;
+&lt;p&gt;24年时，偶然得知数桥谜题，了解游戏规则后，有了开发的写法&lt;/p&gt;
+&lt;h3&gt;25.1.27 开始制作&lt;/h3&gt;
+&lt;p&gt;在制作过程期间，多次使用搜索，还是发现没人&lt;code&gt;用除js以外的语言&lt;/code&gt;做这类游戏。&lt;/p&gt;
+&lt;p&gt;网上有的基本上也是&lt;code&gt;html+js&lt;/code&gt;写的，没有开放任何有用的源代码&lt;/p&gt;
+&lt;p&gt;我仅凭兴趣去开发了这个程序，代码质量不能保证。&lt;/p&gt;
+&lt;h3&gt;25.1.28 基础地图生成逻辑&lt;/h3&gt;
+&lt;p&gt;参见 &lt;code&gt;NumberBridgeGamePanel实例.CreateBaseMap()&lt;/code&gt;&lt;/p&gt;
+&lt;h3&gt;25.1.29 基础地图生成逻辑完成&lt;/h3&gt;
+&lt;h3&gt;25.1.30 完成并打包Setup&lt;/h3&gt;
+&lt;p&gt;包括正常的谜题地图随机生成，求解，游玩功能&lt;/p&gt;
+&lt;h3&gt;25.2.22 完成 NumberBridgeAvalonia&lt;/h3&gt;
+&lt;p&gt;真不是我说从wpf尝试移植到Avalonia上面真是麻烦，不仅部分属性声明改变了，控件样式自定义都有很大不同。&lt;/p&gt;
+&lt;p&gt;花了一个下午，写这个的时间是22:34左右。&lt;/p&gt;
+&lt;p&gt;android端开发挺费劲的，无法打断点，编译时间巨长(安卓端要编译两轮80个库)。&lt;/p&gt;
+&lt;p&gt;window端也是遇到了对话框问题，avalonia没有对话框，需要社区库，我使用了&lt;code&gt;MessageBox.Avalonia&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;为了适配多端界面稍微改了布局，已知且不会解决的问题是&lt;code&gt;SelectSizeDialogControl&lt;/code&gt;背景透明，由于没找到获取主题背景色的方法所以只能这样了。&lt;/p&gt;
+&lt;p&gt;因为需要单页应用支持所以将这个对话框内置成控件了&lt;/p&gt;
+&lt;p&gt;avalonia这个库是真大，相比wpf版，大了几十倍。&lt;/p&gt;
+&lt;p&gt;本来想整个网页版的，在官方存储库也搜了这个默认模板出现avalonia.js丢失的问题，没有解决就算了。&lt;/p&gt;
+</content:encoded></item><item><title>Music163Helper</title><link>https://authorzixi.github.io/posts/products/music163helper/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/music163helper/</guid><description>Music163Helper</description><pubDate>Sat, 16 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;可以通过api获取音乐歌词，图片，网页版mp3等等。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://orangenew24.lanzouq.com/iatGS2n8f2ef&quot;&gt;【蓝奏 下载】&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>Universal SaveData Chapter Tool</title><link>https://authorzixi.github.io/posts/products/save-chapter-tool/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/save-chapter-tool/</guid><description>A tool for managing save data chapters.</description><pubDate>Fri, 27 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;:::note[简要信息]&lt;br /&gt;
+标签:
+C# Winform | 工具 | 开源 (The Unlicense 许可[^1]) | 免费&lt;/p&gt;
+&lt;p&gt;依赖:
+Microsoft .NET Framework 4.8 (2024/4/12升级)
+:::&lt;/p&gt;
+&lt;p&gt;::github{repo=&quot;AuthorZiXi/UniversalSaveDataChapterTool&quot;}&lt;/p&gt;
+&lt;h2&gt;界面预览&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;1.png&quot; alt=&quot;界面预览1&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;2.png&quot; alt=&quot;界面预览2&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1Km411z7ig&quot;&gt;教程/介绍视频&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;简介&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Universal SaveData Chapter Tool&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;是一个实现存档位扩展功能，方便存档不够用的玩家和加载以前的存档的工具。&lt;/p&gt;
+&lt;p&gt;:::warning[注意]
+请确保你的游戏存档为热加载(也就是重新加载存档界面时会实时变化)。&lt;/p&gt;
+&lt;p&gt;我们不能保证该工具适用您的游戏，这主要取决于游戏系统和引擎自身。
+:::&lt;/p&gt;
+&lt;p&gt;:::important[目前已知兼容性]
+已知兼容的引擎:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;KrkrZ的几乎全部游戏&lt;/li&gt;
+&lt;li&gt;Favorite View Point System&lt;/li&gt;
+&lt;li&gt;Cat System 2&lt;/li&gt;
+&lt;li&gt;还有更多...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;已知不完全兼容的引擎(需要重启,因为是冷加载):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RealLiveEngine&lt;/li&gt;
+&lt;li&gt;SiglusEngine&lt;/li&gt;
+&lt;li&gt;还有更多...
+:::&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;简易的操作指示&lt;/h3&gt;
+&lt;p&gt;请加载对应游戏的存档位置（选择注册，打开文件夹或者拖动文件夹到窗口）&lt;/p&gt;
+&lt;p&gt;如果加载完成了将会保存已经被集合记录的文件夹（在SaveDataPaths.txt）&lt;/p&gt;
+&lt;p&gt;操作非常简单，基本无需教程&lt;/p&gt;
+&lt;h2&gt;更新日志&lt;/h2&gt;
+&lt;h3&gt;2024.4.12&lt;/h3&gt;
+&lt;p&gt;v2.4 Final Edition&lt;/p&gt;
+&lt;p&gt;不会更新了，功能已经十分完整了！&lt;/p&gt;
+&lt;p&gt;更新依赖版本，优化了界面布局。&lt;/p&gt;
+&lt;p&gt;让在列表框右键具有更多功能(比如打开文件夹目录)。&lt;/p&gt;
+&lt;p&gt;真正的解决了章节文件夹数字顺序错误问题，关键在于下面的代码：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.OrderBy(folder =&amp;gt; int.Parse(Regex.Match(Path.GetFileName(folder), @&quot;\d+&quot;).Value))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;非常抱歉的是源代码丢失了！😭所以我之后不会更新了！！！&lt;/p&gt;
+&lt;p&gt;因为我在使用GitGraph插件时操作失误导致本地代码回滚了，所以新代码丢失了😱。&lt;/p&gt;
+&lt;p&gt;而且这不是第一次，第一次在开发LFE项目代码时。&lt;/p&gt;
+&lt;p&gt;不熟练使用git之类的东西的人千万不要乱操作😵，不然就像我一样悲惨的结局！😇&lt;/p&gt;
+&lt;p&gt;不过幸好我能提供exe文件，所以你仍然可以使用这个工具新版本。&lt;/p&gt;
+&lt;p&gt;话说我是不是预言了，这会真是最终版了（软件绝版了）！！！😰&lt;/p&gt;
+&lt;h3&gt;2023.9.28&lt;/h3&gt;
+&lt;p&gt;中秋节更新！！🥮🥮&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;界面可以最小化了，支持可调节的窗口（已经足够了）。&lt;/li&gt;
+&lt;li&gt;让文件列表使用文件名，而不是完整路径。&lt;/li&gt;
+&lt;li&gt;添加了删除功能！！&lt;/li&gt;
+&lt;li&gt;界面重新写(更简洁，好看了一点，Winform界面只能这样了哦！)&lt;/li&gt;
+&lt;li&gt;代码重新整理了一下&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;2023.8.25&lt;/h3&gt;
+&lt;p&gt;第一个正式版。
+测试过基本没有任何问题。
+[^1]:&lt;a href=&quot;https://choosealicense.com/licenses/unlicense/&quot;&gt;The Unlicense&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>RandomChoice</title><link>https://authorzixi.github.io/posts/products/randomchoice/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/randomchoice/</guid><description>RandomChoice Introduction</description><pubDate>Sun, 11 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;::github{repo=&quot;AuthorZiXi/RandomChoice&quot;}&lt;/p&gt;
+&lt;p&gt;::github{repo=&quot;AuthorZiXi/RandomChoiceConsole&quot;}&lt;/p&gt;
+&lt;p&gt;随机选择：在无法决定时随机做出的选择&lt;/p&gt;
+</content:encoded></item><item><title>ScnScript Language Support</title><link>https://authorzixi.github.io/posts/products/scnscript-language-support/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/scnscript-language-support/</guid><description>A syntax highlighting and code snippet plugin for ScnScript</description><pubDate>Sun, 11 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;ScnScript Language Support&lt;/h1&gt;
+&lt;p&gt;::github{repo=&quot;AuthorZiXi/scnscript-language-support&quot;}&lt;/p&gt;
+&lt;p&gt;这个插件是一个用于ScnScript的语法高亮和代码片段插件。&lt;/p&gt;
+&lt;h1&gt;“ScnScript Language Support”更新日志（非实时变化）&lt;/h1&gt;
+&lt;h2&gt;1.24.5&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[x] 优化语法匹配&lt;/li&gt;
+&lt;li&gt;[x] 章节折叠支持&lt;/li&gt;
+&lt;li&gt;[x] 更新语法片段支持&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;0.23.12&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[x] 设置了插件图标&lt;/li&gt;
+&lt;li&gt;[x] 设置了.scn的文件图标&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;0.23.11&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;[x] 设置语法高亮文件&lt;/li&gt;
+&lt;li&gt;[x] 加入语法片段&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded></item><item><title>IconSizeTest</title><link>https://authorzixi.github.io/posts/products/iconsizetest/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/iconsizetest/</guid><description>Test the size of the icon in different places</description><pubDate>Sun, 13 Nov 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;::github{repo=&quot;AuthorZiXi/IconSizeTest&quot;}&lt;/p&gt;
+&lt;h2&gt;简介&lt;/h2&gt;
+&lt;p&gt;测试图标在不同地方的大小&lt;/p&gt;
+&lt;p&gt;可以任意使用本程序，使用方法修改/替换 “IconSizeTest.ico”&lt;/p&gt;
+&lt;p&gt;在任务管理器，任务栏，资源管理器等可以看到数字，这个数字就是图标尺寸&lt;/p&gt;
+</content:encoded></item><item><title>EProgramTools</title><link>https://authorzixi.github.io/posts/products/eprogramtools/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/eprogramtools/</guid><description>Some programs developed using Elanguages</description><pubDate>Sun, 13 Nov 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;::github{repo=&quot;AuthorZiXi/EProgramTools&quot;}&lt;/p&gt;
+&lt;p&gt;使用易语言开发的一些程序，基本没有多少有用的&lt;/p&gt;
+&lt;p&gt;tools里的程序基本可以使用，save里面的有所有我开发过的易语言程序&lt;/p&gt;
+&lt;p&gt;2022年11/13存档，把几个程序重置&lt;/p&gt;
+&lt;p&gt;2022年之后我将不再支持和开发易语言程序&lt;/p&gt;
+</content:encoded></item></channel></rss>
