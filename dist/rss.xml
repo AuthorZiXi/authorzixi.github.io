@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AuthorZiXi&apos;s Bedroom</title><description>My personal blog</description><link>https://authorzixi.github.io/</link><language>zh_CN</language><item><title>琉璃交错 ～妹物语～ 通关</title><link>https://authorzixi.github.io/posts/today/2025/0715/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/today/2025/0715/</guid><description>琉璃交错 ～妹物语～ 通关</description><pubDate>Tue, 15 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;原名： ルリのかさね ～いもうと物語り～&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AuthorZiXi&apos;s Bedroom</title><description>My personal blog</description><link>https://authorzixi.github.io/</link><language>zh_CN</language><item><title>Music163Helper</title><link>https://authorzixi.github.io/posts/products/music163helper2/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/music163helper2/</guid><description>Music163Helper</description><pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Music163Helper 2.0&lt;/h2&gt;
+&lt;p&gt;&amp;lt;tinytext&amp;gt;首次公布：2024-11-16，初次更新: 2025-03-15，最新更新时间: 2025-07-20&amp;lt;/tinytext&amp;gt;&lt;/p&gt;
+&lt;p&gt;可以通过api获取音乐歌词，图片，网页版mp3等等。&lt;/p&gt;
+&lt;p&gt;Music163Helper 2.0 by AuthorZiXi 2025.7.20&lt;/p&gt;
+&lt;p&gt;更新详细：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用Winform内置功能保存图像为png&lt;/li&gt;
+&lt;li&gt;修复重定向(302 Found)下载问题&lt;/li&gt;
+&lt;li&gt;添加了翻译/罗马音的歌词获取功能&lt;/li&gt;
+&lt;li&gt;添加了保存对话框更多注意事项&lt;/li&gt;
+&lt;li&gt;在上架前修复了一些零零碎碎的小bug&lt;/li&gt;
+&lt;li&gt;补充了一些工具提示&lt;/li&gt;
+&lt;li&gt;升级版本信息，添加此条消息&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;感谢你再次选择AuthorZiXi开发的软件！&lt;/p&gt;
+&lt;p&gt;最新版下载 2.0 (2025.7.20)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://orangenew24.lanzouq.com/iFtNt31g3sob&quot;&gt;【蓝奏 下载】&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;旧版 1.0 (2024.11.16)&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;1.png&quot; alt=&quot;1.0截图&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://orangenew24.lanzouq.com/iatGS2n8f2ef&quot;&gt;【蓝奏 下载】&lt;/a&gt;&lt;/p&gt;
+</content:encoded></item><item><title>琉璃交错 ～妹物语～ 通关</title><link>https://authorzixi.github.io/posts/today/2025/0715/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/today/2025/0715/</guid><description>琉璃交错 ～妹物语～ 通关</description><pubDate>Tue, 15 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;原名： ルリのかさね ～いもうと物語り～&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://product.hobibox.net/ruri-imouto/chara1.php&quot;&gt;游戏官网&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;总的评价&lt;/h2&gt;
 &lt;p&gt;这部作品剧情不错，我只通女主琉璃线。&lt;/p&gt;
@@ -124,7 +144,7 @@
 &lt;h4&gt;近期开发照片(2025.7.8~9)&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&quot;2025-07-08_1.png&quot; alt=&quot;2025-07-08_1.png&quot; /&gt;
 &lt;img src=&quot;2025-07-09_1.png&quot; alt=&quot;2025-07-09_1.png&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>2025 部分项目的时间表</title><link>https://authorzixi.github.io/posts/today/2025/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/today/2025/</guid><description>The schedule for some projects in 2025</description><pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;2025.1.1&lt;/h3&gt;
+</content:encoded></item><item><title>2025 部分项目的时间表(2025.7.20更新)</title><link>https://authorzixi.github.io/posts/today/2025/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/today/2025/</guid><description>The schedule for some projects in 2025</description><pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;2025.1.1&lt;/h3&gt;
 &lt;p&gt;函数显示器（没有编辑功能，基于Canvas实现） 不开放源代码，写的太烂了，没实际功能 &lt;a href=&quot;https://orangenew24.lanzouq.com/isCvI2jkl41i&quot;&gt;【蓝奏 下载】&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;2025.1.17&lt;/h3&gt;
 &lt;p&gt;Unity控件拖拽功能实现（没多大技术含量&lt;/p&gt;
@@ -169,6 +189,8 @@
 &lt;p&gt;更新一个页面：&lt;a href=&quot;0715/&quot;&gt;琉璃交错 ～妹物语～ 通关&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;顺便把Banner整了，unisonshift的版权也标了一下。&lt;/p&gt;
 &lt;p&gt;彻底改完准备上传： 2025年7月16日01点32分&lt;/p&gt;
+&lt;h3&gt;2025.7.20&lt;/h3&gt;
+&lt;p&gt;更新 &lt;a href=&quot;../../products/music163helper2/&quot;&gt;Music163Helper 2.0&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>NumberBridgeWpf</title><link>https://authorzixi.github.io/posts/products/numberbridgewpf/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/numberbridgewpf/</guid><description>NumberBridgeWpf is a Hashiwokakero game</description><pubDate>Thu, 30 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;“简单的”数桥游戏，用&lt;code&gt;C#+wpf&lt;/code&gt;制作。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;2.jpg&quot; alt=&quot;手机版截图&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;使用 MIT LICENSE&lt;/strong&gt;&lt;/p&gt;
@@ -209,8 +231,6 @@ PutGame.cs 在 &lt;code&gt;NumberBridgeWpf&lt;/code&gt; 是将地图数据转换
 &lt;p&gt;因为需要单页应用支持所以将这个对话框内置成控件了&lt;/p&gt;
 &lt;p&gt;avalonia这个库是真大，相比wpf版，大了几十倍。&lt;/p&gt;
 &lt;p&gt;本来想整个网页版的，在官方存储库也搜了这个默认模板出现avalonia.js丢失的问题，没有解决就算了。&lt;/p&gt;
-</content:encoded></item><item><title>Music163Helper</title><link>https://authorzixi.github.io/posts/products/music163helper/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/music163helper/</guid><description>Music163Helper</description><pubDate>Sat, 16 Nov 2024 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;可以通过api获取音乐歌词，图片，网页版mp3等等。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://orangenew24.lanzouq.com/iatGS2n8f2ef&quot;&gt;【蓝奏 下载】&lt;/a&gt;&lt;/p&gt;
 </content:encoded></item><item><title>Universal SaveData Chapter Tool</title><link>https://authorzixi.github.io/posts/products/save-chapter-tool/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/save-chapter-tool/</guid><description>A tool for managing save data chapters.</description><pubDate>Fri, 27 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;:::note[简要信息]&lt;br /&gt;
 标签:
 C# Winform | 工具 | 开源 (The Unlicense 许可[^1]) | 免费&lt;/p&gt;
