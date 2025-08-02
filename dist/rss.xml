@@ -1,87 +1,106 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AuthorZiXi&apos;s Bedroom</title><description>My personal blog</description><link>https://authorzixi.github.io/</link><language>zh_CN</language><item><title>废村少女 [贰] ~诱惑阴影的秘姬之匣~ 通关</title><link>https://authorzixi.github.io/posts/today/2025/0801/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/today/2025/0801/</guid><description>废村少女 [贰] ~诱惑阴影的秘姬之匣~ 通关</description><pubDate>Fri, 01 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;原名：廃村少女［弐］ ～陰り誘う秘姫の匣～&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.escude.co.jp/product/haison2/&quot;&gt;游戏官网&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;总的评价&lt;/h2&gt;
-&lt;p&gt;继废村少女初代后，&lt;code&gt;Escu:de&lt;/code&gt;使用新的方式继续为我们带来的具有&lt;code&gt;实用性&lt;/code&gt;和&lt;code&gt;剧情性&lt;/code&gt;的新作。&lt;/p&gt;
-&lt;p&gt;从探寻秘密出发，具有&lt;code&gt;丰富的&lt;/code&gt;剧情，塑造&lt;code&gt;鲜活的&lt;/code&gt;角色，&lt;code&gt;优秀的&lt;/code&gt;系统和演出效果。&lt;/p&gt;
-&lt;p&gt;系统方面还添加了&lt;code&gt;路线流程图&lt;/code&gt;，&lt;s&gt;终于可以少存档了(不是)&lt;/s&gt;，结果还是用了4次&lt;a href=&quot;../../../products/save-chapter-tool/&quot;&gt;USDCT&lt;/a&gt;。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;在一个个记忆碎片中，回想起忘记的约定。&lt;/p&gt;
-&lt;p&gt;与“心珠”斗争，逃离心珠町，解开爷爷所埋下的谜团，寻找“秘姬之匣”。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;我已经把除 “七七濑”之外的线全通了(这里指的是“七七濑”的线剧情没看，只是个人喜好原因没推而已)，包括总共 2 个 BadEnd ， 所有个人线扩展 H 和完美结局。&lt;/p&gt;
-&lt;p&gt;用了4天时间(7.29~8.1)，录屏时间是23个小时左右，可见&lt;code&gt;剧情量很大&lt;/code&gt;（H大部分快进了）。&lt;/p&gt;
-&lt;p&gt;:::caution[包含剧透]
-&lt;strong&gt;下面内容包含大量剧透，请谨慎观看！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;完美结局剧透：&lt;/p&gt;
-&lt;p&gt;&amp;lt;blackly title=&quot;剧透&quot;&amp;gt;
-最完美的结局需要其他结局都玩完，然后在完美结局中是所有人，
-包括心珠（月夜），御匣大人和（幽界的小月夜）公主都救出来了
-&amp;lt;/blackly&amp;gt;&lt;/p&gt;
-&lt;p&gt;:::&lt;/p&gt;
-&lt;p&gt;剧情当然少不了跌宕起伏，情绪刻画，在我看来本作是&lt;code&gt;毋庸置疑的&lt;/code&gt;神作。（废村系列剧情都挺好的！&lt;/p&gt;
-&lt;p&gt;当然两代的&lt;code&gt;STAFF&lt;/code&gt;都是可以点击的，还是把大部分都看完了(声优提供的是录音，没有翻译就算了)。&lt;/p&gt;
-&lt;h2&gt;资源建议&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.escude.co.jp/product/haison2/&quot;&gt;游戏官网&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>AuthorZiXi&apos;s Bedroom</title><description>My personal blog</description><link>https://fuwari.vercel.app/</link><language>zh_CN</language><item><title>Win32Menu 教程</title><link>https://fuwari.vercel.app/posts/products/win32menu/tutorial/</link><guid isPermaLink="true">https://fuwari.vercel.app/posts/products/win32menu/tutorial/</guid><description>Tutorial of Win32Menu</description><pubDate>Sat, 02 Aug 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;1.安装&lt;/h1&gt;
+&lt;p&gt;建议使用 &lt;a href=&quot;https://www.nuget.org/packages/Win32Menu&quot;&gt;nuget 包&lt;/a&gt; 进行安装&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;2.png&quot; alt=&quot;在 VisualStudio 中搜索 Win32Menu&quot; title=&quot;在 VisualStudio 中搜索 Win32Menu&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;在您的 IDE 中为相应项目打开 nuget 包管理器，搜索 &lt;code&gt;Win32Menu&lt;/code&gt;，选择并安装它&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;2.png&quot; alt=&quot;Nuget 中的 Win32Menu&quot; title=&quot;Nuget 中的 Win32Menu&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;如果您使用 vscode 或其他不支持 nuget 包管理器的编辑器或 IDE，请使用 dotnet 命令进行安装。您可以在 &lt;a href=&quot;https://www.nuget.org/packages/Win32Menu&quot;&gt;nuget 包网站&lt;/a&gt; 上查看安装命令。&lt;/p&gt;
+&lt;p&gt;当然，您也可以手动下载源代码，直接添加项目引用。😊&lt;/p&gt;
+&lt;p&gt;仓库:&lt;/p&gt;
+&lt;p&gt;::github{repo=&quot;AuthorZiXi/Win32Menu&quot;}&lt;/p&gt;
+&lt;h1&gt;2.使用命名空间&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;using Win32Menu;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;这个项目只有一个命名空间，&lt;code&gt;Win32Menu&lt;/code&gt;。&lt;/p&gt;
+&lt;h1&gt;3.使用示例&lt;/h1&gt;
+&lt;p&gt;如果您可以下载此项目(指在github仓库)，&lt;/p&gt;
+&lt;p&gt;有两种类型的项目示例：&lt;code&gt;Win32MenuWinFormsDemo&lt;/code&gt; 和 &lt;code&gt;Win32MenuWpfDemo&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;以下是具体的使用过程：&lt;/p&gt;
+&lt;h3&gt;创建菜单栏&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;NativeMenu menu;
+
+menu = new NativeMenu()
+{
+    Uid = 888,
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;创建菜单项&lt;/h3&gt;
+&lt;p&gt;NativeMenu 中的每个对象都应该有一个&lt;strong&gt;唯一的 Uid&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;菜单上有一些可配置的属性，如 &lt;code&gt;Text&lt;/code&gt;、&lt;code&gt;Type&lt;/code&gt;、&lt;code&gt;Status&lt;/code&gt;、&lt;code&gt;Checked&lt;/code&gt;、&lt;code&gt;IsRadioCheck&lt;/code&gt; 和 &lt;code&gt;RightJustify&lt;/code&gt;。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;var file = new NativeMenu()
+{
+    Uid = 1,
+    Text = &quot;文件&quot;
+};
+var exit = new NativeMenu()
+{
+    Uid = 2,
+    Text = &quot;退出&quot;
+}
+
+exit.Click += (NativeMenu _, ref bool _) =&amp;gt;
+{
+    Close();
+};
+
+file.AppendMenu(exit);
+
+menu.AppendMenu(file,true);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;p&gt;:::note[点击事件的第二个参数有什么用？]&lt;/p&gt;
+&lt;p&gt;它表示是否启用同步。同步是指将菜单项对象的状态同步到底层托管菜单的状态。&lt;/p&gt;
+&lt;p&gt;如果您更改了菜单项的状态但没有看到变化，那是因为您没有将其设置为 true。&lt;/p&gt;
+&lt;p&gt;如果不涉及状态变化，请不要修改它，特别是在窗口关闭时。&lt;/p&gt;
+&lt;p&gt;其背后的菜单也会被销毁，此时同步会导致异常！
+:::&lt;/p&gt;
+&lt;h3&gt;处理 WndProc&lt;/h3&gt;
 &lt;p&gt;:::warning[注意]
-&amp;lt;biggertext&amp;gt;如果有能力请支持官方！&amp;lt;/biggertext&amp;gt;
+如果您想使用 Click 事件，必须执行此步骤。
 :::&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://lzacg.cc/9524&quot;&gt;量子acg&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;不得不说量子速度真的快，才发售没多久，AI翻译就出来了。&lt;/p&gt;
-&lt;p&gt;:::tip[值得提醒]
-这里翻译会导致音乐鉴赏的文字乱码(实际就是没翻)&lt;/p&gt;
-&lt;p&gt;音乐鉴赏里缺少一些歌，比如OP/ED（应该是官方版就没有&lt;/p&gt;
-&lt;p&gt;STAFF没翻，系统也是（除了Tips。&lt;/p&gt;
-&lt;p&gt;不过不影响游戏体验
-:::&lt;/p&gt;
-&lt;p&gt;翻译源： Gemini-2.5-Pro翻译 by 云忆夕&lt;/p&gt;
-&lt;h2&gt;图片与音乐&lt;/h2&gt;
-&lt;h3&gt;游戏截图&lt;/h3&gt;
-&lt;p&gt;分类内皆是时间顺序！&lt;/p&gt;
-&lt;p&gt;鼠标悬浮在图片上还有描述哦！&lt;/p&gt;
-&lt;h4&gt;普通&lt;/h4&gt;
-&lt;p&gt;&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-29%20172301.png&quot; alt=&quot;初见阳渚&quot; title=&quot;初见阳渚&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-29%20180325.png&quot; alt=&quot;逃避的铃&quot; title=&quot;逃避的铃&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-30%20163024.png&quot; alt=&quot;吃醋的心珠(月海)&quot; title=&quot;吃醋的心珠(月海)&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-08-01%20093353.png&quot; alt=&quot;铃的表白&quot; title=&quot;铃的表白&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;涉及剧透&lt;/h4&gt;
-&lt;p&gt;:::caution[包含剧透]
-&lt;strong&gt;下面内容包含大量剧透，请谨慎观看！&lt;/strong&gt;
-:::&lt;/p&gt;
-&lt;p&gt;阳渚：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-30%20150323.png&quot; alt=&quot;察觉到心珠就是月海的阳渚&quot; title=&quot;察觉到心珠就是月海的阳渚&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;八千代：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20104243.png&quot; alt=&quot;本地人八千代&quot; title=&quot;本地人八千代&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20123017.png&quot; alt=&quot;八千代名字来源&quot; title=&quot;八千代名字来源&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20123057.png&quot; alt=&quot;八千代第一次喊母亲&quot; title=&quot;八千代第一次喊母亲&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20123116.png&quot; alt=&quot;千惠感慨孩子八千代长大了&quot; title=&quot;千惠感慨孩子八千代长大了&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20145020.png&quot; alt=&quot;八千代个人线通过截图&quot; title=&quot;八千代个人线通过截图&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;心珠的身份相关：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20162338.png&quot; alt=&quot;揭示心珠身份的回忆&quot; title=&quot;揭示心珠身份的回忆&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20162426.png&quot; alt=&quot;剧情中心珠与幼时月海对比图&quot; title=&quot;剧情中心珠与幼时月海对比图&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20163138.png&quot; alt=&quot;幽世中小月海(公主)解释身份&quot; title=&quot;幽世中小月海(公主)解释身份&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20163609.png&quot; alt=&quot;公主“官方”认证心珠就是月海&quot; title=&quot;公主“官方”认证心珠就是月海&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20163732.png&quot; alt=&quot;公主解释外貌变成小月海的原因&quot; title=&quot;公主解释外貌变成小月海的原因&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;约定与御匣大人，公主两人：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20174609.png&quot; alt=&quot;男主：在“梦”中约定无法实现&quot; title=&quot;男主：在“梦”中约定无法实现&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20174648.png&quot; alt=&quot;男主：😱我还没说啥呢，别急着走！ &quot; title=&quot;男主：😱我还没说啥呢，别急着走！ &quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20174704.png&quot; alt=&quot;公主：早点说嘛，原来你们还能和平谈判。🤣&quot; title=&quot;公主：早点说嘛，原来你们还能和平谈判。🤣&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20204932.png&quot; alt=&quot;御匣大人：我不能单单看着！&quot; title=&quot;御匣大人：我不能单单看着！&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20205007.png&quot; alt=&quot;御匣大人懊悔无力的自己&quot; title=&quot;御匣大人懊悔无力的自己&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20205033.png&quot; alt=&quot;御匣大人与母亲有约定&quot; title=&quot;御匣大人与母亲有约定&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-07-31%20205046.png&quot; alt=&quot;御匣大人与母亲约定的内容&quot; title=&quot;御匣大人与母亲约定的内容&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-08-01%20104916.png&quot; alt=&quot;公主在完美结局的微笑&quot; title=&quot;公主在完美结局的微笑&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;完美结局：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-08-01%20105945.png&quot; alt=&quot;完美结局：一路顺风。祝你旅途愉快！&quot; title=&quot;完美结局：一路顺风。祝你旅途愉快！&quot; /&gt;
-&lt;img src=&quot;%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-08-01%20110835.png&quot; alt=&quot;完美结局“完”截图&quot; title=&quot;完美结局“完”截图&quot; /&gt;&lt;/p&gt;
-&lt;h4&gt;扩展内容&lt;/h4&gt;
-&lt;p&gt;立绘模式整出来的所有角色立绘一览&lt;/p&gt;
-&lt;p&gt;站在角色后方的是该角色的小时候！&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;haison2_20250801_111324.png&quot; alt=&quot;立绘一览&quot; title=&quot;立绘一览&quot; /&gt;&lt;/p&gt;
-&lt;h3&gt;音乐&lt;/h3&gt;
-&lt;p&gt;目前ED等其他音乐网易还没收录，但OP已经有了(写的日期为 2025.8.1)。&lt;/p&gt;
-&lt;p&gt;&amp;lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;//music.163.com/outchain/player?type=2&amp;amp;id=2679734125&amp;amp;auto=1&amp;amp;height=66&quot;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://music.163.com/song?id=2679734125&amp;amp;uct2=U2FsdGVkX19DPSissFN8uY1msEORi1vKFcUXgVeY5fA=&quot;&gt;《孤籠の鶫 (feat. 霜月はるか)》歌曲&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>Music163Helper</title><link>https://authorzixi.github.io/posts/products/music163helper2/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/music163helper2/</guid><description>Music163Helper</description><pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Music163Helper 2.0&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;protected override void WndProc(ref Message m)
+{
+    
+    if (m.Msg is (int)WndProcMsgType.WmCommand)
+    {
+        if (menu is not null)
+        {
+            menu.ProcessWndProcParams(m.WParam)
+        }
+        
+    }
+        
+    base.WndProc(ref m);
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;var hs = PresentationSource.FromVisual(this) as HwndSource;
+if (hs is null) throw new NullReferenceException(nameof(hs));
+hs.AddHook(WndProc);
+
+private nint WndProc(nint hWnd, int msg, nint wParam, nint lParam, ref bool handled)
+{
+    
+    if (msg is (int)WndProcMsgType.WmCommand) 
+    {
+        menu.ProcessWndProcParams(wParam);
+    }
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;设置菜单&lt;/h3&gt;
+&lt;h4&gt;对于窗口&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;menu.SetMenu(Handle);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;SetMenu 只应用于作为窗口菜单栏的 NativeMenu 对象。&lt;/p&gt;
+&lt;h4&gt;对于系统菜单&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;menu.SetupForSystemMenu(Handle);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;menu.SetupForSystemMenu(Handle);&lt;/code&gt; 与 &lt;code&gt;menu.SetMenu(Handle);&lt;/code&gt; 它们相互冲突。请不要尝试混合使用它们，否则会出现奇怪的问题。&lt;/p&gt;
+&lt;h3&gt;移除菜单&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;NativeMenu.SetNullMenu(Handle);&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;提供句柄后，菜单将被移除。&lt;/p&gt;
+&lt;p&gt;请注意，它不会被销毁。您可以按照设置菜单的原始方式重用它。&lt;/p&gt;
+&lt;h3&gt;销毁菜单&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;menu.Dispose()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;通常不需要销毁它，除非您喜欢独立管理它。&lt;/p&gt;
+</content:encoded></item><item><title>Music163Helper</title><link>https://fuwari.vercel.app/posts/products/music163helper2/</link><guid isPermaLink="true">https://fuwari.vercel.app/posts/products/music163helper2/</guid><description>Music163Helper</description><pubDate>Sun, 20 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Music163Helper 2.0&lt;/h2&gt;
 &lt;p&gt;&amp;lt;tinytext&amp;gt;首次公布：2024-11-16，初次更新: 2025-03-15，最新更新时间: 2025-07-20&amp;lt;/tinytext&amp;gt;&lt;/p&gt;
 &lt;p&gt;可以通过api获取音乐歌词，图片，网页版mp3等等。&lt;/p&gt;
 &lt;p&gt;Music163Helper 2.0 by AuthorZiXi 2025.7.20&lt;/p&gt;
@@ -101,7 +120,7 @@
 &lt;h2&gt;旧版 1.0 (2024.11.16)&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&quot;1.png&quot; alt=&quot;1.0截图&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://orangenew24.lanzouq.com/iatGS2n8f2ef&quot;&gt;【蓝奏 下载】&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>琉璃交错 ～妹物语～ 通关</title><link>https://authorzixi.github.io/posts/today/2025/0715/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/today/2025/0715/</guid><description>琉璃交错 ～妹物语～ 通关</description><pubDate>Tue, 15 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;原名： ルリのかさね ～いもうと物語り～&lt;/p&gt;
+</content:encoded></item><item><title>琉璃交错 ～妹物语～ 通关</title><link>https://fuwari.vercel.app/posts/today/2025/0715/</link><guid isPermaLink="true">https://fuwari.vercel.app/posts/today/2025/0715/</guid><description>琉璃交错 ～妹物语～ 通关</description><pubDate>Tue, 15 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;原名： ルリのかさね ～いもうと物語り～&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://product.hobibox.net/ruri-imouto/chara1.php&quot;&gt;游戏官网&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;总的评价&lt;/h2&gt;
 &lt;p&gt;这部作品剧情不错，我只通女主琉璃线。&lt;/p&gt;
@@ -109,26 +128,25 @@
 &lt;p&gt;:::caution[包含剧透]
 &lt;strong&gt;下面内容包含大量剧透，请谨慎观看！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;涉及剧透（主要是琉璃线） :&lt;/p&gt;
-&lt;p&gt;&amp;lt;blackly&amp;gt;
-琉璃之妹剧情诗，处处都需要总结。&amp;lt;br/&amp;gt;
-琉璃命名的作品，何者不为琉璃迷？&amp;lt;br/&amp;gt;
-其他女主似摆设，存在需要后期上。&amp;lt;br/&amp;gt;
-整体时间虽不长，分章倒是多滴很。&amp;lt;br/&amp;gt;
-选项真是居多杂，通关必需要攻略。&amp;lt;br/&amp;gt;
-刚刚开始我蒙蔽，时间流程有点乱。&amp;lt;br/&amp;gt;
-记忆与今日何时，平平淡淡才理来。&amp;lt;br/&amp;gt;
-随随便便几年过，事情发生太突然。&amp;lt;br/&amp;gt;
-亲戚夫妇和父亲，三个亲人车祸死。&amp;lt;br/&amp;gt;
-孤苦伶仃太可怜，琉璃想要成为妹。&amp;lt;br/&amp;gt;
-结局一跌宕病死，只有二三好结局。&amp;lt;br/&amp;gt;
-雨中隐喻的告白，成为全局最亮点。&amp;lt;br/&amp;gt;
-有时发色有瑕疵，琉璃可爱一切行。&amp;lt;br/&amp;gt;
-皇时玩法有些花，不过剧情才重点。&amp;lt;br/&amp;gt;
-最终评价剧情神，音乐也非常好听。&amp;lt;br/&amp;gt;
-这时我在熬夜写，希望你也去玩玩。
-&amp;lt;/blackly&amp;gt;&lt;/p&gt;
-&lt;p&gt;-- AuthorZiXi 2025年7月16日01点07分&lt;/p&gt;
-&lt;p&gt;:::&lt;/p&gt;
+&lt;p&gt;:::collapsed[琉璃之诗]&lt;/p&gt;
+&lt;p&gt;琉璃之妹剧情诗，处处都需要总结。&lt;/p&gt;
+&lt;p&gt;琉璃命名的作品，何者不为琉璃迷？&lt;/p&gt;
+&lt;p&gt;其他女主似摆设，存在需要后期上。&lt;/p&gt;
+&lt;p&gt;整体时间虽不长，分章倒是多滴很。&lt;/p&gt;
+&lt;p&gt;选项真是居多杂，通关必需要攻略。&lt;/p&gt;
+&lt;p&gt;刚刚开始我蒙蔽，时间流程有点乱。&lt;/p&gt;
+&lt;p&gt;记忆与今日何时，平平淡淡才理来。&lt;/p&gt;
+&lt;p&gt;随随便便几年过，事情发生太突然。&lt;/p&gt;
+&lt;p&gt;亲戚夫妇和父亲，三个亲人车祸死。&lt;/p&gt;
+&lt;p&gt;孤苦伶仃太可怜，琉璃想要成为妹。&lt;/p&gt;
+&lt;p&gt;结局一跌宕病死，只有二三好结局。&lt;/p&gt;
+&lt;p&gt;雨中隐喻的告白，成为全局最亮点。&lt;/p&gt;
+&lt;p&gt;有时发色有瑕疵，琉璃可爱一切行。&lt;/p&gt;
+&lt;p&gt;皇时玩法有些花，不过剧情才重点。&lt;/p&gt;
+&lt;p&gt;最终评价剧情神，音乐也非常好听。&lt;/p&gt;
+&lt;p&gt;这时我在熬夜写，希望你也去玩玩。&lt;/p&gt;
+&lt;p&gt;-- AuthorZiXi 2025年7月16日01点07分
+:::&lt;/p&gt;
 &lt;h2&gt;汉化资源建议&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://product.hobibox.net/ruri-imouto/chara1.php&quot;&gt;游戏官网&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;:::warning[注意]
@@ -176,8 +194,7 @@
 &lt;/blockquote&gt;
 &lt;h3&gt;更新提醒(2025.8.1)：&lt;/h3&gt;
 &lt;p&gt;修正一些版式，增加了剧透提示，给图像添加title了。&lt;/p&gt;
-</content:encoded></item><item><title>强调一下更新问题</title><link>https://authorzixi.github.io/posts/today/2025/0713/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/today/2025/0713/</guid><description>强调一下更新问题</description><pubDate>Sun, 13 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;有部分内容是更新在以前发布的文章中，可以去翻翻看网站更新日期。&lt;/p&gt;
-</content:encoded></item><item><title>Win32Menu</title><link>https://authorzixi.github.io/posts/products/win32menu/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/win32menu/</guid><description>Highly encapsulated Win32 native menu implementation</description><pubDate>Sun, 13 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Win32Menu&lt;/h1&gt;
+</content:encoded></item><item><title>Win32Menu</title><link>https://fuwari.vercel.app/posts/products/win32menu/</link><guid isPermaLink="true">https://fuwari.vercel.app/posts/products/win32menu/</guid><description>Highly encapsulated Win32 native menu implementation</description><pubDate>Sun, 13 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;Win32Menu&lt;/h1&gt;
 &lt;p&gt;::github{repo=&quot;AuthorZiXi/Win32Menu&quot;}&lt;/p&gt;
 &lt;h2&gt;简介&lt;/h2&gt;
 &lt;p&gt;Win32 原生菜单高度封装实现&lt;/p&gt;
@@ -191,6 +208,7 @@
 &lt;p&gt;如果还是不明白怎么用的话，请下载项目或直接在&lt;a href=&quot;https://github.com/AuthorZiXi/Win32Menu&quot;&gt;『Github』&lt;/a&gt;查看代码&lt;/p&gt;
 &lt;p&gt;查看两个 Demo(演示了如何在 WinForm，Wpf 中使用)&lt;/p&gt;
 &lt;p&gt;更推荐看&lt;code&gt;Win32MenuWinFormsDemo&lt;/code&gt;，因为菜单样式更全一点。&lt;/p&gt;
+&lt;p&gt;本站还部署了&lt;a href=&quot;tutorial/&quot;&gt;教程&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;局限性？&lt;/h2&gt;
 &lt;p&gt;本项目创建之初没有打算支持弹出菜单方法和带图标的菜单。&lt;/p&gt;
 &lt;p&gt;同时，也不建议使用外部方法干扰封装的菜单类。&lt;/p&gt;
@@ -202,7 +220,8 @@
 &lt;h2&gt;为什么要做这个项目？&lt;/h2&gt;
 &lt;p&gt;其实想法最初起源于&lt;code&gt;一些krkr游戏带有菜单&lt;/code&gt;和&lt;code&gt;我认为看起来不太满意的Winform菜单&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;在之前我那被抛弃的 LeafFallEngine 里实现过&lt;a href=&quot;https://github.com/AuthorZiXi/LeafFallEngine/blob/main/Helper/HelperWin32Menu.cs&quot;&gt;『部分功能』&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>近期跑了些GPT-SoVits</title><link>https://authorzixi.github.io/posts/today/2025/0711/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/today/2025/0711/</guid><description>近期跑了些GPT-SoVits</description><pubDate>Fri, 11 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;过程&lt;/h2&gt;
+</content:encoded></item><item><title>强调一下更新问题</title><link>https://fuwari.vercel.app/posts/today/2025/0713/</link><guid isPermaLink="true">https://fuwari.vercel.app/posts/today/2025/0713/</guid><description>强调一下更新问题</description><pubDate>Sun, 13 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;有部分内容是更新在以前发布的文章中，可以去翻翻看网站更新日期。&lt;/p&gt;
+</content:encoded></item><item><title>近期跑了些GPT-SoVits</title><link>https://fuwari.vercel.app/posts/today/2025/0711/</link><guid isPermaLink="true">https://fuwari.vercel.app/posts/today/2025/0711/</guid><description>近期跑了些GPT-SoVits</description><pubDate>Fri, 11 Jul 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;过程&lt;/h2&gt;
 &lt;p&gt;使用这个项目&lt;/p&gt;
 &lt;p&gt;::github{repo=&quot;RVC-Boss/GPT-SoVITS&quot;}&lt;/p&gt;
 &lt;p&gt;我们一开始使用2000+条游戏语音素材进行文字识别，之后除空，再使用200语音一件三连，SoVits+GPT训练，基本每个都要三小时内完成。之后效果还不错。&lt;/p&gt;
@@ -215,7 +234,7 @@
 &lt;h3&gt;铃(甘神大人的糖浆恋祭)&lt;/h3&gt;
 &lt;p&gt;【皆さん、こんにちは!鈴,幸和の妹です】&lt;/p&gt;
 &lt;p&gt;&amp;lt;audio src=&quot;/audio/rin_clear200_v2pp_1.wav&quot; proload=&quot;auto&quot; controls&amp;gt;&amp;lt;/audio&amp;gt;&lt;/p&gt;
-</content:encoded></item><item><title>一些没有提到却在计划或开发的项目</title><link>https://authorzixi.github.io/posts/today/2025/0315/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/today/2025/0315/</guid><description>一些没有提到却在计划或开发的项目</description><pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;:::warning[注意]
+</content:encoded></item><item><title>一些没有提到却在计划或开发的项目</title><link>https://fuwari.vercel.app/posts/today/2025/0315/</link><guid isPermaLink="true">https://fuwari.vercel.app/posts/today/2025/0315/</guid><description>一些没有提到却在计划或开发的项目</description><pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;:::warning[注意]
 设计大多数在草稿本上设计，基本不会拍照公开。&lt;/p&gt;
 &lt;p&gt;标题中的星号表示将是近期重点开发的项目。&lt;/p&gt;
 &lt;p&gt;在开发中&lt;strong&gt;不代表&lt;/strong&gt;功能完善。&lt;/p&gt;
@@ -240,7 +259,7 @@
 &lt;h4&gt;近期开发照片(2025.7.8~9)&lt;/h4&gt;
 &lt;p&gt;&lt;img src=&quot;2025-07-08_1.png&quot; alt=&quot;2025-07-08_1.png&quot; title=&quot;TideFile截图&quot; /&gt;
 &lt;img src=&quot;2025-07-09_1.png&quot; alt=&quot;2025-07-09_1.png&quot; title=&quot;TideFile截图&quot; /&gt;&lt;/p&gt;
-</content:encoded></item><item><title>2025 更新时间表(2025.8.1更新)</title><link>https://authorzixi.github.io/posts/today/2025/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/today/2025/</guid><description>The schedule for some projects in 2025</description><pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;2025.1.1&lt;/h3&gt;
+</content:encoded></item><item><title>2025 更新时间表(2025.8.2更新)</title><link>https://fuwari.vercel.app/posts/today/2025/</link><guid isPermaLink="true">https://fuwari.vercel.app/posts/today/2025/</guid><description>The schedule for some projects in 2025</description><pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h3&gt;2025.1.1&lt;/h3&gt;
 &lt;p&gt;函数显示器（没有编辑功能，基于Canvas实现） 不开放源代码，写的太烂了，没实际功能 &lt;a href=&quot;https://orangenew24.lanzouq.com/isCvI2jkl41i&quot;&gt;【蓝奏 下载】&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;2025.1.17&lt;/h3&gt;
 &lt;p&gt;Unity控件拖拽功能实现（没多大技术含量&lt;/p&gt;
@@ -290,7 +309,46 @@
 &lt;h3&gt;2025.8.1&lt;/h3&gt;
 &lt;p&gt;更新 &lt;a href=&quot;0801/&quot;&gt;废村少女 [贰] 通关&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;并补充了很多图片的Title属性。&lt;/p&gt;
-</content:encoded></item><item><title>NumberBridgeWpf</title><link>https://authorzixi.github.io/posts/products/numberbridgewpf/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/numberbridgewpf/</guid><description>NumberBridgeWpf is a Hashiwokakero game</description><pubDate>Thu, 30 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;“简单的”数桥游戏，用&lt;code&gt;C#+wpf&lt;/code&gt;制作。&lt;/p&gt;
+&lt;h3&gt;2025.8.2&lt;/h3&gt;
+&lt;p&gt;更新fuwari到最新版本，&lt;/p&gt;
+&lt;p&gt;给markdown的yaml添加新属性&lt;code&gt;onlycover&lt;/code&gt;代表image属性的图片只作为封面，不显示在文章中。&lt;/p&gt;
+&lt;p&gt;制作collapsed组件，用于折叠内容。&lt;/p&gt;
+&lt;p&gt;:::collapsed[感慨]&lt;/p&gt;
+&lt;p&gt;这个东西写起来还是挺麻烦的，ts+styl+mjs都得写。&lt;/p&gt;
+&lt;p&gt;这么个东西花了几个小时，真的血压高，写着写着都得气死。&lt;/p&gt;
+&lt;p&gt;这个astro似乎有一个糟糕的缓存机制，导致开发时很多内容都需要重开几十遍才生效。&lt;/p&gt;
+&lt;p&gt;实际上组件代码只要修改就应该给使用了这个组件的页面手动刷新一下(Ctrl+S)，检测到改动才会重新生成。&lt;/p&gt;
+&lt;p&gt;还有开发时文档都几乎等同于没有，只能我直接在本地源码中摸索。&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;astro.config.mjs&lt;/code&gt;里可以导入自己的组件&lt;/p&gt;
+&lt;p&gt;在&lt;code&gt;[...slug].astro&lt;/code&gt;里决定了文档页面框架(不是最外层的哦)，我顺便注入一个&lt;code&gt;injection.ts&lt;/code&gt;脚本负责自定义控件之类的互动。&lt;/p&gt;
+&lt;p&gt;我在&lt;code&gt;content\config.ts&lt;/code&gt;自定义了一个&lt;code&gt;onlycover&lt;/code&gt;布尔属性决定在&lt;code&gt;frontmatter&lt;/code&gt;的&lt;code&gt;image&lt;/code&gt;是否不展示到文章中。&lt;/p&gt;
+&lt;p&gt;顺便写了个&lt;code&gt;injection&lt;/code&gt;函数给更多自定义组件埋下伏笔。&lt;/p&gt;
+&lt;p&gt;这个东西用ts自定义了个导出函数&lt;code&gt;injection&lt;/code&gt;挂载在页面核心组件上，注册window的load事件执行。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script&amp;gt;
+    // 这里是注入自定义脚本
+    import { injection } from &quot;@/plugins/custom/injection&quot;
+    window.addEventListener(&quot;load&quot; , () =&amp;gt; {
+        injection()
+    });
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;用styl写了个样式，用height动画实现，用mjs写了个组件生成。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;collapsed&lt;/code&gt;组件在一开始展开的高度记录成&lt;code&gt;--source-height&lt;/code&gt;css属性，再根据&lt;code&gt;open&lt;/code&gt;属性决定是否展开。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;这里空一下是为了防止误识别
+    :::collapsed{title=&quot;折叠&quot; open=true}
+    大概就是这样吧
+    :::
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;p&gt;:::collapsed{title=&quot;然后&quot; open=true}&lt;/p&gt;
+&lt;p&gt;【这里的内容默认展开】&lt;/p&gt;
+&lt;p&gt;就没什么了，打算直接更新同步到githubpage上了。&lt;/p&gt;
+&lt;p&gt;:::&lt;/p&gt;
+&lt;p&gt;更新了一些页面的样式，用上了&lt;code&gt;collapsed&lt;/code&gt;组件，比如最近的两个游戏的玩后感。&lt;/p&gt;
+&lt;p&gt;顺便补充了一个&lt;a href=&quot;../../products/win32menu/tutorial/&quot;&gt;中文的win32menu教程&lt;/a&gt;，&lt;/p&gt;
+&lt;p&gt;用上了最新&lt;code&gt;fuwari&lt;/code&gt;采用的&lt;code&gt;Expressive Code&lt;/code&gt;功能，便于标记代码之类的。&lt;/p&gt;
+&lt;p&gt;还是不说这么多了吧，22:50 了，总之下次再见咯！&lt;/p&gt;
+</content:encoded></item><item><title>NumberBridgeWpf</title><link>https://fuwari.vercel.app/posts/products/numberbridgewpf/</link><guid isPermaLink="true">https://fuwari.vercel.app/posts/products/numberbridgewpf/</guid><description>NumberBridgeWpf is a Hashiwokakero game</description><pubDate>Thu, 30 Jan 2025 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;“简单的”数桥游戏，用&lt;code&gt;C#+wpf&lt;/code&gt;制作。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;2.jpg&quot; alt=&quot;手机版截图&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;使用 MIT LICENSE&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;::github{repo=&quot;AuthorZiXi/NumberBridgeWpf&quot;}&lt;/p&gt;
@@ -330,7 +388,7 @@ PutGame.cs 在 &lt;code&gt;NumberBridgeWpf&lt;/code&gt; 是将地图数据转换
 &lt;p&gt;因为需要单页应用支持所以将这个对话框内置成控件了&lt;/p&gt;
 &lt;p&gt;avalonia这个库是真大，相比wpf版，大了几十倍。&lt;/p&gt;
 &lt;p&gt;本来想整个网页版的，在官方存储库也搜了这个默认模板出现avalonia.js丢失的问题，没有解决就算了。&lt;/p&gt;
-</content:encoded></item><item><title>Universal SaveData Chapter Tool</title><link>https://authorzixi.github.io/posts/products/save-chapter-tool/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/save-chapter-tool/</guid><description>A tool for managing save data chapters.</description><pubDate>Fri, 27 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;:::note[简要信息]&lt;br /&gt;
+</content:encoded></item><item><title>Universal SaveData Chapter Tool</title><link>https://fuwari.vercel.app/posts/products/save-chapter-tool/</link><guid isPermaLink="true">https://fuwari.vercel.app/posts/products/save-chapter-tool/</guid><description>A tool for managing save data chapters.</description><pubDate>Fri, 27 Oct 2023 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;:::note[简要信息]&lt;br /&gt;
 标签:
 C# Winform | 工具 | 开源 (The Unlicense 许可[^1]) | 免费&lt;/p&gt;
 &lt;p&gt;依赖:
@@ -395,10 +453,7 @@ Microsoft .NET Framework 4.8 (2024/4/12升级)
 &lt;p&gt;第一个正式版。
 测试过基本没有任何问题。
 [^1]:&lt;a href=&quot;https://choosealicense.com/licenses/unlicense/&quot;&gt;The Unlicense&lt;/a&gt;&lt;/p&gt;
-</content:encoded></item><item><title>RandomChoice</title><link>https://authorzixi.github.io/posts/products/randomchoice/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/randomchoice/</guid><description>RandomChoice Introduction</description><pubDate>Sun, 11 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;::github{repo=&quot;AuthorZiXi/RandomChoice&quot;}&lt;/p&gt;
-&lt;p&gt;::github{repo=&quot;AuthorZiXi/RandomChoiceConsole&quot;}&lt;/p&gt;
-&lt;p&gt;随机选择：在无法决定时随机做出的选择&lt;/p&gt;
-</content:encoded></item><item><title>ScnScript Language Support</title><link>https://authorzixi.github.io/posts/products/scnscript-language-support/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/scnscript-language-support/</guid><description>A syntax highlighting and code snippet plugin for ScnScript</description><pubDate>Sun, 11 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;ScnScript Language Support&lt;/h1&gt;
+</content:encoded></item><item><title>ScnScript Language Support</title><link>https://fuwari.vercel.app/posts/products/scnscript-language-support/</link><guid isPermaLink="true">https://fuwari.vercel.app/posts/products/scnscript-language-support/</guid><description>A syntax highlighting and code snippet plugin for ScnScript</description><pubDate>Sun, 11 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;h1&gt;ScnScript Language Support&lt;/h1&gt;
 &lt;p&gt;::github{repo=&quot;AuthorZiXi/scnscript-language-support&quot;}&lt;/p&gt;
 &lt;p&gt;这个插件是一个用于ScnScript的语法高亮和代码片段插件。&lt;/p&gt;
 &lt;h1&gt;“ScnScript Language Support”更新日志（非实时变化）&lt;/h1&gt;
@@ -418,14 +473,17 @@ Microsoft .NET Framework 4.8 (2024/4/12升级)
 &lt;li&gt;[x] 设置语法高亮文件&lt;/li&gt;
 &lt;li&gt;[x] 加入语法片段&lt;/li&gt;
 &lt;/ul&gt;
-</content:encoded></item><item><title>IconSizeTest</title><link>https://authorzixi.github.io/posts/products/iconsizetest/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/iconsizetest/</guid><description>Test the size of the icon in different places</description><pubDate>Sun, 13 Nov 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;::github{repo=&quot;AuthorZiXi/IconSizeTest&quot;}&lt;/p&gt;
-&lt;h2&gt;简介&lt;/h2&gt;
-&lt;p&gt;测试图标在不同地方的大小&lt;/p&gt;
-&lt;p&gt;可以任意使用本程序，使用方法修改/替换 “IconSizeTest.ico”&lt;/p&gt;
-&lt;p&gt;在任务管理器，任务栏，资源管理器等可以看到数字，这个数字就是图标尺寸&lt;/p&gt;
-</content:encoded></item><item><title>EProgramTools</title><link>https://authorzixi.github.io/posts/products/eprogramtools/</link><guid isPermaLink="true">https://authorzixi.github.io/posts/products/eprogramtools/</guid><description>Some programs developed using Elanguages</description><pubDate>Sun, 13 Nov 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;::github{repo=&quot;AuthorZiXi/EProgramTools&quot;}&lt;/p&gt;
+</content:encoded></item><item><title>RandomChoice</title><link>https://fuwari.vercel.app/posts/products/randomchoice/</link><guid isPermaLink="true">https://fuwari.vercel.app/posts/products/randomchoice/</guid><description>RandomChoice Introduction</description><pubDate>Sun, 11 Dec 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;::github{repo=&quot;AuthorZiXi/RandomChoice&quot;}&lt;/p&gt;
+&lt;p&gt;::github{repo=&quot;AuthorZiXi/RandomChoiceConsole&quot;}&lt;/p&gt;
+&lt;p&gt;随机选择：在无法决定时随机做出的选择&lt;/p&gt;
+</content:encoded></item><item><title>EProgramTools</title><link>https://fuwari.vercel.app/posts/products/eprogramtools/</link><guid isPermaLink="true">https://fuwari.vercel.app/posts/products/eprogramtools/</guid><description>Some programs developed using Elanguages</description><pubDate>Sun, 13 Nov 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;::github{repo=&quot;AuthorZiXi/EProgramTools&quot;}&lt;/p&gt;
 &lt;p&gt;使用易语言开发的一些程序，基本没有多少有用的&lt;/p&gt;
 &lt;p&gt;tools里的程序基本可以使用，save里面的有所有我开发过的易语言程序&lt;/p&gt;
 &lt;p&gt;2022年11/13存档，把几个程序重置&lt;/p&gt;
 &lt;p&gt;2022年之后我将不再支持和开发易语言程序&lt;/p&gt;
+</content:encoded></item><item><title>IconSizeTest</title><link>https://fuwari.vercel.app/posts/products/iconsizetest/</link><guid isPermaLink="true">https://fuwari.vercel.app/posts/products/iconsizetest/</guid><description>Test the size of the icon in different places</description><pubDate>Sun, 13 Nov 2022 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;::github{repo=&quot;AuthorZiXi/IconSizeTest&quot;}&lt;/p&gt;
+&lt;h2&gt;简介&lt;/h2&gt;
+&lt;p&gt;测试图标在不同地方的大小&lt;/p&gt;
+&lt;p&gt;可以任意使用本程序，使用方法修改/替换 “IconSizeTest.ico”&lt;/p&gt;
+&lt;p&gt;在任务管理器，任务栏，资源管理器等可以看到数字，这个数字就是图标尺寸&lt;/p&gt;
 </content:encoded></item></channel></rss>
