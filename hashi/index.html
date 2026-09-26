@@ -1,0 +1,2245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0b0e17">
+
+
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/192.png">
+    <!-- iOS -->
+    <link rel="apple-touch-icon" href="icons/192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="数桥">
+
+    <title>数桥 · Hashiwokakero</title>
+    <style>
+        /* ===== 样式 ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg: #0b0e17;
+            --surface: rgba(20, 28, 48, 0.75);
+            --surface-border: rgba(64, 164, 223, 0.20);
+            --text: #eef5ff;
+            --text-dim: #7a8aa8;
+            --accent: #40a4df;
+            --accent-glow: rgba(64, 164, 223, 0.35);
+            --accent-green: #4cd9a0;
+            --accent-amber: #f5c542;
+            --danger: #f05a6a;
+            --radius: 16px;
+            --shadow: 0 12px 48px rgba(0, 0, 0, 0.60);
+            --font: 'Inter', system-ui, sans-serif;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font);
+            padding: 8px;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .app {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background: var(--surface);
+            backdrop-filter: blur(18px);
+            border: 1px solid var(--surface-border);
+            border-radius: var(--radius);
+            padding: 10px 12px 8px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 4px 8px;
+            padding-bottom: 4px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 600;
+            font-size: 18px;
+            user-select: none;
+            cursor: default;
+        }
+
+        .logo span {
+            background: var(--accent);
+            color: #0b0e17;
+            padding: 1px 10px 1px 8px;
+            border-radius: 40px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 4px 8px;
+            padding: 3px 0;
+        }
+
+        .controls .group {
+            display: flex;
+            align-items: center;
+            gap: 4px 6px;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2px 8px 2px 10px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+        }
+
+        .controls label {
+            font-size: 13px;
+            color: var(--text-dim);
+            font-weight: 500;
+        }
+
+        .controls input[type="number"],
+        .controls input[type="text"] {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 30px;
+            padding: 2px 10px;
+            color: var(--text);
+            font-size: 14px;
+            font-family: var(--font);
+            outline: none;
+            transition: border 0.2s;
+            text-align: center;
+            min-width: 50px;
+            flex: 1;
+        }
+
+        .controls input[type="text"] {
+            min-width: 80px;
+            text-align: left;
+        }
+
+        .controls input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 2px var(--accent-glow);
+        }
+
+        .btn {
+            background: rgba(255, 255, 255, 0.06);
+            border: none;
+            border-radius: 30px;
+            padding: 4px 12px;
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text);
+            cursor: pointer;
+            transition: all 0.20s;
+            font-family: var(--font);
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            white-space: nowrap;
+            border: 1px solid transparent;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+            transform: translateY(-1px);
+        }
+
+        .btn:active {
+            transform: scale(0.96);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #0b0e17;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            background: #5bb4f0;
+            box-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .btn-green {
+            background: var(--accent-green);
+            color: #0b0e17;
+            font-weight: 600;
+        }
+
+        .btn-green:hover {
+            background: #60e6b0;
+            box-shadow: 0 0 20px rgba(76, 217, 160, 0.35);
+        }
+
+        .btn-outline {
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent);
+        }
+
+        .btn-sm {
+            padding: 2px 8px;
+            font-size: 12px;
+        }
+
+        .btn-knife {
+            background: rgba(245, 197, 66, 0.15);
+            border-color: var(--accent-amber);
+            color: var(--accent-amber);
+        }
+
+        .btn-knife.active {
+            background: var(--accent-amber);
+            color: #0b0e17;
+            box-shadow: 0 0 20px rgba(245, 197, 66, 0.30);
+        }
+
+        .btn-aux {
+            background: rgba(76, 217, 160, 0.15);
+            border-color: var(--accent-green);
+            color: var(--accent-green);
+        }
+
+        .btn-aux.active {
+            background: var(--accent-green);
+            color: #0b0e17;
+            box-shadow: 0 0 20px rgba(76, 217, 160, 0.30);
+        }
+
+        .preset-group {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+        }
+
+        .preset-btn {
+            font-size: 12px;
+            padding: 2px 8px;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 30px;
+            color: var(--text-dim);
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .preset-btn:hover {
+            background: rgba(255, 255, 255, 0.10);
+            color: var(--text);
+        }
+
+        .canvas-wrap {
+            flex: 1;
+            min-height: 0;
+            position: relative;
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            overflow: auto;
+            touch-action: none;
+        }
+
+        .canvas-wrap canvas {
+            display: block;
+            touch-action: none;
+        }
+
+        .canvas-wrap.knife canvas {
+            cursor: crosshair;
+        }
+
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 4px 10px;
+            padding-top: 4px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            font-size: 12px;
+            color: var(--text-dim);
+        }
+
+        .footer .progress-wrap {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex: 1;
+            min-width: 80px;
+        }
+
+        .footer .bar-track {
+            flex: 1;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            overflow: hidden;
+            min-width: 40px;
+        }
+
+        .footer .bar-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--accent-green), var(--accent));
+            border-radius: 10px;
+            transition: width 0.30s ease;
+        }
+
+        .footer .status {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 500;
+        }
+
+        .status .dot {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--accent);
+            animation: pulse-dot 1.6s infinite;
+        }
+
+        .status .dot.green {
+            background: var(--accent-green);
+        }
+
+        .status .dot.amber {
+            background: var(--accent-amber);
+        }
+
+        .status .dot.danger {
+            background: var(--danger);
+            animation: none;
+        }
+
+        @keyframes pulse-dot {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.4;
+                transform: scale(0.8);
+            }
+        }
+
+        .footer .seed-hash {
+            font-family: monospace;
+            font-size: 11px;
+            opacity: 0.5;
+            max-width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .footer .credit {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.2);
+            white-space: nowrap;
+            display: flex;
+            gap: 6px;
+            align-items: center;
+        }
+
+        .footer .credit a {
+            color: rgba(255, 255, 255, 0.3);
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .footer .credit a:hover {
+            color: var(--accent);
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%) translateY(80px);
+            background: rgba(12, 18, 30, 0.92);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 40px;
+            padding: 8px 20px;
+            font-size: 13px;
+            color: var(--text);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.50);
+            transition: all 0.40s cubic-bezier(0.22, 1, 0.36, 1);
+            opacity: 0;
+            pointer-events: none;
+            z-index: 999;
+            text-align: center;
+            max-width: 90vw;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0px);
+        }
+
+        .toast.error {
+            border-color: var(--danger);
+            color: #ffb0b0;
+        }
+
+        .toast.success {
+            border-color: var(--accent-green);
+            color: var(--accent-green);
+        }
+
+        /* ===== 调试面板 ===== */
+        .debug-panel {
+            display: none;
+            position: fixed;
+            bottom: 70px;
+            right: 16px;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 14px 16px;
+            gap: 8px;
+            flex-direction: column;
+            font-size: 12px;
+            z-index: 100;
+            min-width: 200px;
+            max-height: 70vh;
+            overflow-y: auto;
+            color: var(--text);
+        }
+
+        .debug-panel.show {
+            display: flex;
+        }
+
+        .debug-panel .debug-section {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding: 4px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .debug-panel .debug-section:first-child {
+            border-top: none;
+        }
+
+        .debug-panel .debug-label {
+            font-size: 11px;
+            color: var(--text-dim);
+            font-weight: 500;
+            margin-right: 6px;
+        }
+
+        .debug-panel .debug-row {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .debug-panel .debug-row input[type="range"] {
+            flex: 1;
+            min-width: 80px;
+            accent-color: var(--accent);
+            background: rgba(255, 255, 255, 0.1);
+            height: 4px;
+            border-radius: 4px;
+        }
+
+        .debug-panel .debug-row input[type="number"] {
+            width: 44px;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 1px 6px;
+            color: var(--text);
+            font-size: 12px;
+            text-align: center;
+            font-family: var(--font);
+            outline: none;
+        }
+
+        .debug-panel .debug-row input[type="number"]:focus {
+            border-color: var(--accent);
+        }
+
+        .debug-panel .debug-btn-sm {
+            background: rgba(255, 255, 255, 0.06);
+            border: none;
+            border-radius: 20px;
+            padding: 2px 10px;
+            color: var(--text);
+            cursor: pointer;
+            font-size: 11px;
+            transition: 0.2s;
+        }
+
+        .debug-panel .debug-btn-sm:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .debug-panel .debug-info {
+            font-size: 11px;
+            color: var(--text-dim);
+            word-break: break-all;
+            max-height: 120px;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+
+        .debug-panel .debug-info .highlight {
+            color: var(--accent-green);
+        }
+
+        @media (max-width: 700px) {
+            .app {
+                padding: 6px 8px;
+                gap: 6px;
+            }
+
+            .logo {
+                font-size: 16px;
+            }
+
+            .logo span {
+                font-size: 12px;
+            }
+
+            .controls .group {
+                padding: 2px 6px;
+            }
+
+            .controls input[type="number"] {
+                min-width: 40px;
+                font-size: 13px;
+                padding: 1px 6px;
+            }
+
+            .controls input[type="text"] {
+                min-width: 60px;
+                font-size: 13px;
+            }
+
+            .btn {
+                font-size: 12px;
+                padding: 3px 8px;
+            }
+
+            .preset-btn {
+                font-size: 11px;
+                padding: 2px 6px;
+            }
+
+            .footer {
+                font-size: 11px;
+            }
+
+            .footer .seed-hash {
+                max-width: 60px;
+            }
+
+            .footer .credit {
+                font-size: 10px;
+                flex-wrap: wrap;
+            }
+
+            .toast {
+                font-size: 12px;
+                padding: 6px 16px;
+                bottom: 14px;
+            }
+
+            .debug-panel {
+                right: 8px;
+                bottom: 60px;
+                min-width: 160px;
+                padding: 10px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .controls .group {
+                padding: 1px 4px;
+                gap: 3px;
+            }
+
+            .controls label {
+                font-size: 11px;
+            }
+
+            .controls input[type="number"] {
+                min-width: 32px;
+                font-size: 12px;
+            }
+
+            .controls input[type="text"] {
+                min-width: 50px;
+                font-size: 12px;
+            }
+
+            .btn {
+                font-size: 11px;
+                padding: 2px 6px;
+            }
+
+            .preset-btn {
+                font-size: 10px;
+                padding: 1px 5px;
+            }
+
+            .debug-panel {
+                min-width: 140px;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app" id="app">
+        <div class="header">
+            <div class="logo" id="logo">数桥 <span>Hashi</span></div>
+            <div class="header-actions">
+                <button class="btn btn-sm btn-outline" id="btnImport">📂 导入</button>
+                <button class="btn btn-sm btn-outline" id="btnExport">📥 CSV</button>
+                <button class="btn btn-sm btn-outline" id="btnExportImage">🖼️ 图片</button>
+                <button class="btn btn-sm btn-outline" id="btnResetBridges">🧹 清桥</button>
+                <button class="btn btn-sm btn-knife" id="btnKnife">🔪 美工刀</button>
+                <button class="btn btn-sm btn-aux" id="btnAux">💡 辅助</button>
+                <button class="btn btn-sm btn-outline" id="btnCheck">✓ 检查</button>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="group">
+                <label>种子</label>
+                <input type="text" id="seedInput" value="20260905" />
+                <button class="btn btn-sm btn-primary" id="btnRandomSeed">🎲</button>
+            </div>
+            <div class="group">
+                <label>宽</label>
+                <input type="number" id="widthInput" value="7" min="4" max="256" />
+                <label>高</label>
+                <input type="number" id="heightInput" value="7" min="4" max="256" />
+                <button class="btn btn-sm btn-primary" id="btnGenerate">✦ 生成</button>
+            </div>
+            <div class="group preset-group">
+                <span style="font-size:13px;color:var(--text-dim);margin-right:2px;">预设</span>
+                <button class="preset-btn" data-w="7" data-h="7">7×7</button>
+                <button class="preset-btn" data-w="18" data-h="18">18×18</button>
+                <button class="preset-btn" data-w="50" data-h="50">50×50</button>
+                <button class="preset-btn" data-w="128" data-h="128">128×128</button>
+                <button class="preset-btn" data-w="256" data-h="256">256×256</button>
+            </div>
+            <div class="group" style="border-color:rgba(255,255,255,0.02);">
+                <button class="btn btn-sm btn-green" id="btnSolve">🧩 求解</button>
+            </div>
+        </div>
+        <div class="canvas-wrap" id="canvasWrap">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        <div class="footer">
+            <div class="progress-wrap">
+                <span id="progressText">0 / 0</span>
+                <div class="bar-track">
+                    <div class="bar-fill" id="progressFill"></div>
+                </div>
+            </div>
+            <div class="status"><span class="dot" id="statusDot"></span><span id="statusText">就绪</span></div>
+            <div class="seed-hash" id="seedHash">—</div>
+            <div class="credit">
+                <span>制作: <a href="https://www.deepseek.com/" target="_blank">DeepSeek</a></span>
+                <span>设计指导: <a href="https://github.com/AuthorZiXi" target="_blank">AuthorZiXi</a></span>
+                <span>2026/9/5</span>
+            </div>
+        </div>
+    </div>
+    <div class="toast" id="toast"></div>
+    <!-- ===== 调试面板 ===== -->
+    <div class="debug-panel" id="debugPanel">
+        <div class="debug-section">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-weight:600;font-size:13px;">🎛️ 视觉配置</span>
+                <button class="debug-btn-sm" id="debugResetDefaults">重置默认</button>
+            </div>
+            <div class="debug-row">
+                <span class="debug-label">格子大小(px)</span>
+                <input type="range" id="cfgCellSize" min="10" max="80" step="1" value="40" />
+                <input type="number" id="cfgCellSizeNum" min="10" max="80" step="1" value="40" />
+            </div>
+            <div class="debug-row">
+                <span class="debug-label">桥宽(px)</span>
+                <input type="range" id="cfgBridgeWidth" min="1" max="8" step="0.5" value="4" />
+                <input type="number" id="cfgBridgeWidthNum" min="1" max="8" step="0.5" value="4" />
+            </div>
+            <div class="debug-row">
+                <span class="debug-label">坐标大小(px)</span>
+                <input type="range" id="cfgCoordSize" min="8" max="28" step="1" value="16" />
+                <input type="number" id="cfgCoordSizeNum" min="8" max="28" step="1" value="16" />
+            </div>
+            <div class="debug-row">
+                <span class="debug-label">岛屿大小(比例)</span>
+                <input type="range" id="cfgIslandSize" min="0.10" max="0.50" step="0.01" value="0.20" />
+                <input type="number" id="cfgIslandSizeNum" min="0.10" max="0.50" step="0.01" value="0.20" />
+            </div>
+            <div class="debug-row">
+                <span class="debug-label">画布边距(px)</span>
+                <input type="range" id="cfgPadding" min="20" max="80" step="1" value="45" />
+                <input type="number" id="cfgPaddingNum" min="20" max="80" step="1" value="45" />
+            </div>
+        </div>
+        <div class="debug-section">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+                <span style="font-weight:600;font-size:13px;">📊 游戏状态</span>
+                <button class="debug-btn-sm" id="debugRefreshState">刷新</button>
+            </div>
+            <div class="debug-info" id="debugStateInfo">就绪</div>
+        </div>
+        <div class="debug-section">
+            <button class="debug-btn-sm" id="dbgShowIsolated">📍 显示孤立岛</button>
+            <button class="debug-btn-sm" id="dbgForceConnect">🔗 强制连通</button>
+            <button class="debug-btn-sm" id="dbgLogState">📋 输出状态到控制台</button>
+        </div>
+    </div>
+    <script>
+        // ================================================================
+        //  数桥 · 固定格子尺寸 + 滚动条
+        // ================================================================
+
+        // ---------- 工具 ----------
+        function mulberry32(a) {
+            return function () {
+                a |= 0;
+                a = a + 0x6D2B79F5 | 0;
+                let t = Math.imul(a ^ a >>> 15, 1 | a);
+                t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+                return ((t ^ t >>> 14) >>> 0) / 4294967296;
+            };
+        }
+        function hashString(str) {
+            let h = 0;
+            for (let i = 0; i < str.length; i++) {
+                h = (h * 31 + str.charCodeAt(i)) >>> 0;
+            }
+            return h || 20260905;
+        }
+        function shuffle(arr, rng) {
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(rng() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+        function clone(obj) { return JSON.parse(JSON.stringify(obj)); }
+
+        // ================================================================
+        //  游戏核心 (不变)
+        // ================================================================
+        class HashiGame {
+            constructor(width, height, seed) {
+                this.width = Math.max(4, width | 0);
+                this.height = Math.max(4, height | 0);
+                this.seed = seed >>> 0;
+                this.islands = [];
+                this.bridges = [];
+                this.selected = null;
+                this.solvedState = null;
+                this.rng = mulberry32(this.seed);
+                this._generate();
+            }
+
+            _generate() {
+                const w = this.width,
+                    h = this.height;
+                const rng = this.rng;
+                const totalCells = w * h;
+                let density = 0.22 + rng() * 0.08;
+                if (totalCells > 10000) density = 0.18 + rng() * 0.06;
+                if (totalCells > 40000) density = 0.14 + rng() * 0.05;
+                let targetCount = Math.max(5, Math.floor(totalCells * density));
+                targetCount = Math.min(targetCount, Math.floor(totalCells * 0.40));
+
+                const occupied = new Set();
+                const key = (x, y) => x + ',' + y;
+                const isOccupied = (x, y) => occupied.has(key(x, y));
+
+                const islands = [];
+                const answerBridges = [];
+
+                let startX = Math.floor(rng() * w);
+                let startY = Math.floor(rng() * h);
+                let attempts = 0;
+                while (attempts < 200) {
+                    let hasDir = false;
+                    const dirs = [[0, 1], [0, -1], [1, 0], [-1, 0]];
+                    for (const [dx, dy] of dirs) {
+                        for (let dist = 2; dist < Math.max(w, h); dist++) {
+                            const nx = startX + dx * dist, ny = startY + dy * dist;
+                            if (nx < 0 || nx >= w || ny < 0 || ny >= h) break;
+                            let free = true;
+                            for (let d = 1; d <= dist; d++) {
+                                const cx = startX + dx * d, cy = startY + dy * d;
+                                if (isOccupied(cx, cy)) { free = false; break; }
+                            }
+                            if (free) { hasDir = true; break; }
+                        }
+                        if (hasDir) break;
+                    }
+                    if (hasDir) break;
+                    startX = Math.floor(rng() * w);
+                    startY = Math.floor(rng() * h);
+                    attempts++;
+                }
+
+                const startId = 0;
+                islands.push({ x: startX, y: startY, id: startId });
+                occupied.add(key(startX, startY));
+
+                const queue = [startId];
+                let maxIter = 0;
+                while (islands.length < targetCount && queue.length > 0 && maxIter < 2000) {
+                    maxIter++;
+                    const idx = queue.shift();
+                    const cur = islands[idx];
+                    const dirs = [[0, 1], [0, -1], [1, 0], [-1, 0]];
+                    let available = [];
+                    for (const [dx, dy] of dirs) {
+                        for (let dist = 2; dist < Math.max(w, h); dist++) {
+                            const nx = cur.x + dx * dist, ny = cur.y + dy * dist;
+                            if (nx < 0 || nx >= w || ny < 0 || ny >= h) break;
+                            let free = true;
+                            for (let d = 1; d <= dist; d++) {
+                                const cx = cur.x + dx * d, cy = cur.y + dy * d;
+                                if (isOccupied(cx, cy)) { free = false; break; }
+                            }
+                            if (free) {
+                                available.push({ dx, dy, dist, nx, ny });
+                            } else {
+                                break;
+                            }
+                        }
+                    }
+                    shuffle(available, rng);
+                    const maxExtend = Math.min(available.length, targetCount - islands.length);
+                    if (maxExtend <= 0) continue;
+                    let extendCount = 1 + Math.floor(rng() * Math.min(maxExtend, 3));
+                    extendCount = Math.min(extendCount, maxExtend);
+                    for (let i = 0; i < extendCount && islands.length < targetCount; i++) {
+                        const dir = available[i];
+                        let free = true;
+                        for (let d = 1; d <= dir.dist; d++) {
+                            const cx = cur.x + dir.dx * d, cy = cur.y + dir.dy * d;
+                            if (isOccupied(cx, cy)) { free = false; break; }
+                        }
+                        if (!free) continue;
+                        const newId = islands.length;
+                        islands.push({ x: dir.nx, y: dir.ny, id: newId });
+                        for (let d = 1; d <= dir.dist; d++) {
+                            const cx = cur.x + dir.dx * d, cy = cur.y + dir.dy * d;
+                            occupied.add(key(cx, cy));
+                        }
+                        answerBridges.push({ from: idx, to: newId, count: 1 });
+                        queue.push(newId);
+                    }
+                }
+
+                if (islands.length < 4) {
+                    for (let y = 0; y < h && islands.length < 6; y++) {
+                        for (let x = 0; x < w && islands.length < 6; x++) {
+                            if (!isOccupied(x, y)) {
+                                let best = -1, bestDist = Infinity;
+                                for (let i = 0; i < islands.length; i++) {
+                                    const a = islands[i];
+                                    if (a.x === x || a.y === y) {
+                                        const dist = a.x === x ? Math.abs(a.y - y) : Math.abs(a.x - x);
+                                        if (dist >= 2 && dist < bestDist) {
+                                            let free = true;
+                                            if (a.x === x) {
+                                                const x0 = a.x;
+                                                const yMin = Math.min(a.y, y), yMax = Math.max(a.y, y);
+                                                for (let yy = yMin + 1; yy < yMax; yy++) {
+                                                    if (isOccupied(x0, yy)) { free = false; break; }
+                                                }
+                                            } else {
+                                                const y0 = a.y;
+                                                const xMin = Math.min(a.x, x), xMax = Math.max(a.x, x);
+                                                for (let xx = xMin + 1; xx < xMax; xx++) {
+                                                    if (isOccupied(xx, y0)) { free = false; break; }
+                                                }
+                                            }
+                                            if (free) { bestDist = dist; best = i; }
+                                        }
+                                    }
+                                }
+                                if (best !== -1) {
+                                    const newId = islands.length;
+                                    islands.push({ x, y, id: newId });
+                                    const a = islands[best];
+                                    if (a.x === x) {
+                                        const x0 = a.x;
+                                        const yMin = Math.min(a.y, y), yMax = Math.max(a.y, y);
+                                        for (let yy = yMin + 1; yy < yMax; yy++) occupied.add(key(x0, yy));
+                                    } else {
+                                        const y0 = a.y;
+                                        const xMin = Math.min(a.x, x), xMax = Math.max(a.x, x);
+                                        for (let xx = xMin + 1; xx < xMax; xx++) occupied.add(key(xx, y0));
+                                    }
+                                    occupied.add(key(x, y));
+                                    answerBridges.push({ from: best, to: newId, count: 1 });
+                                }
+                            }
+                        }
+                    }
+                }
+
+                const n = islands.length;
+                const candidates = [];
+                for (let i = 0; i < n; i++) {
+                    for (let j = i + 1; j < n; j++) {
+                        const a = islands[i], b = islands[j];
+                        if (a.x === b.x || a.y === b.y) {
+                            const dist = a.x === b.x ? Math.abs(a.y - b.y) : Math.abs(a.x - b.x);
+                            if (dist < 2) continue;
+                            let blocked = false;
+                            if (a.x === b.x) {
+                                const x0 = a.x;
+                                const yMin = Math.min(a.y, b.y), yMax = Math.max(a.y, b.y);
+                                for (let yy = yMin + 1; yy < yMax; yy++) {
+                                    if (occupied.has(key(x0, yy))) { blocked = true; break; }
+                                }
+                            } else {
+                                const y0 = a.y;
+                                const xMin = Math.min(a.x, b.x), xMax = Math.max(a.x, b.x);
+                                for (let xx = xMin + 1; xx < xMax; xx++) {
+                                    if (occupied.has(key(xx, y0))) { blocked = true; break; }
+                                }
+                            }
+                            if (!blocked) candidates.push({ from: i, to: j, dist });
+                        }
+                    }
+                }
+                shuffle(candidates, rng);
+                const extraCount = Math.min(candidates.length, Math.floor(rng() * 3) + 1);
+                let addedExtra = 0;
+                for (const e of candidates) {
+                    if (addedExtra >= extraCount) break;
+                    let pathFree = true;
+                    const a = islands[e.from], b = islands[e.to];
+                    if (a.x === b.x) {
+                        const x0 = a.x;
+                        const yMin = Math.min(a.y, b.y), yMax = Math.max(a.y, b.y);
+                        for (let yy = yMin + 1; yy < yMax; yy++) {
+                            if (occupied.has(key(x0, yy))) { pathFree = false; break; }
+                        }
+                    } else {
+                        const y0 = a.y;
+                        const xMin = Math.min(a.x, b.x), xMax = Math.max(a.x, b.x);
+                        for (let xx = xMin + 1; xx < xMax; xx++) {
+                            if (occupied.has(key(xx, y0))) { pathFree = false; break; }
+                        }
+                    }
+                    if (pathFree) {
+                        const count = rng() < 0.5 ? 2 : 1;
+                        let exists = false;
+                        for (const br of answerBridges) {
+                            if ((br.from === e.from && br.to === e.to) || (br.from === e.to && br.to === e.from)) {
+                                exists = true; break;
+                            }
+                        }
+                        if (!exists) {
+                            answerBridges.push({ from: e.from, to: e.to, count });
+                            if (a.x === b.x) {
+                                const x0 = a.x;
+                                const yMin = Math.min(a.y, b.y), yMax = Math.max(a.y, b.y);
+                                for (let yy = yMin + 1; yy < yMax; yy++) occupied.add(key(x0, yy));
+                            } else {
+                                const y0 = a.y;
+                                const xMin = Math.min(a.x, b.x), xMax = Math.max(a.x, b.x);
+                                for (let xx = xMin + 1; xx < xMax; xx++) occupied.add(key(xx, y0));
+                            }
+                            addedExtra++;
+                        }
+                    }
+                }
+
+                const deg = Array(n).fill(0);
+                for (const br of answerBridges) {
+                    deg[br.from] += br.count;
+                    deg[br.to] += br.count;
+                }
+                for (let i = 0; i < n; i++) {
+                    islands[i].number = Math.min(8, Math.max(1, deg[i]));
+                }
+
+                this.islands = islands;
+                this.bridges = [];
+                this.solvedState = {
+                    islands: clone(islands),
+                    bridges: clone(answerBridges)
+                };
+                this.selected = null;
+            }
+
+            getDegree(idx) {
+                let d = 0;
+                for (const b of this.bridges) {
+                    if (b.from === idx) d += b.count;
+                    if (b.to === idx) d += b.count;
+                }
+                return d;
+            }
+
+            getBridgeBetween(a, b) {
+                for (const br of this.bridges) {
+                    if ((br.from === a && br.to === b) || (br.from === b && br.to === a)) return br;
+                }
+                return null;
+            }
+
+            canBuildNewBridge(fromIdx, toIdx) {
+                if (fromIdx === toIdx) return false;
+                const a = this.islands[fromIdx], b = this.islands[toIdx];
+                if (a.x !== b.x && a.y !== b.y) return false;
+                const dist = a.x === b.x ? Math.abs(a.y - b.y) : Math.abs(a.x - b.x);
+                if (dist < 2) return false;
+                for (let i = 0; i < this.islands.length; i++) {
+                    if (i === fromIdx || i === toIdx) continue;
+                    const c = this.islands[i];
+                    if (a.x === b.x) {
+                        if (c.x === a.x && c.y > Math.min(a.y, b.y) && c.y < Math.max(a.y, b.y)) return false;
+                    } else {
+                        if (c.y === a.y && c.x > Math.min(a.x, b.x) && c.x < Math.max(a.x, b.x)) return false;
+                    }
+                }
+                const occupied = new Set();
+                for (const br of this.bridges) {
+                    const f = this.islands[br.from], t = this.islands[br.to];
+                    if (f.x === t.x) {
+                        const x = f.x;
+                        const yMin = Math.min(f.y, t.y), yMax = Math.max(f.y, t.y);
+                        for (let y = yMin + 1; y < yMax; y++) occupied.add(x + ',' + y);
+                    } else {
+                        const y = f.y;
+                        const xMin = Math.min(f.x, t.x), xMax = Math.max(f.x, t.x);
+                        for (let x = xMin + 1; x < xMax; x++) occupied.add(x + ',' + y);
+                    }
+                }
+                if (a.x === b.x) {
+                    const x = a.x;
+                    const yMin = Math.min(a.y, b.y), yMax = Math.max(a.y, b.y);
+                    for (let y = yMin + 1; y < yMax; y++) {
+                        if (occupied.has(x + ',' + y)) return false;
+                    }
+                } else {
+                    const y = a.y;
+                    const xMin = Math.min(a.x, b.x), xMax = Math.max(a.x, b.x);
+                    for (let x = xMin + 1; x < xMax; x++) {
+                        if (occupied.has(x + ',' + y)) return false;
+                    }
+                }
+                if (this.getDegree(fromIdx) >= 8) return false;
+                if (this.getDegree(toIdx) >= 8) return false;
+                return true;
+            }
+
+            addBridge(fromIdx, toIdx) {
+                const existing = this.getBridgeBetween(fromIdx, toIdx);
+                if (existing) {
+                    if (existing.count >= 2) return false;
+                    existing.count++;
+                } else {
+                    if (!this.canBuildNewBridge(fromIdx, toIdx)) return false;
+                    this.bridges.push({ from: fromIdx, to: toIdx, count: 1 });
+                }
+                this.selected = null;
+                return true;
+            }
+
+            removeAllBridges(fromIdx, toIdx) {
+                let removed = 0;
+                while (this.getBridgeBetween(fromIdx, toIdx)) {
+                    const existing = this.getBridgeBetween(fromIdx, toIdx);
+                    if (existing.count > 1) {
+                        existing.count--;
+                    } else {
+                        const idx = this.bridges.indexOf(existing);
+                        if (idx !== -1) this.bridges.splice(idx, 1);
+                    }
+                    removed++;
+                }
+                return removed;
+            }
+
+            removeBridge(fromIdx, toIdx) {
+                const existing = this.getBridgeBetween(fromIdx, toIdx);
+                if (!existing) return false;
+                if (existing.count > 1) {
+                    existing.count--;
+                } else {
+                    const idx = this.bridges.indexOf(existing);
+                    if (idx !== -1) this.bridges.splice(idx, 1);
+                }
+                this.selected = null;
+                return true;
+            }
+
+            resetBridges() {
+                this.bridges = [];
+                this.selected = null;
+            }
+
+            checkSolved() {
+                for (let i = 0; i < this.islands.length; i++) {
+                    if (this.getDegree(i) !== this.islands[i].number) return false;
+                }
+                const n = this.islands.length;
+                if (n === 0) return false;
+                const parent = Array.from({ length: n }, (_, i) => i);
+                const find = (x) => { while (parent[x] !== x) { parent[x] = parent[parent[x]]; x = parent[x]; } return x; };
+                const union = (a, b) => { const ra = find(a), rb = find(b); if (ra !== rb) parent[rb] = ra; };
+                for (const b of this.bridges) union(b.from, b.to);
+                const root = find(0);
+                for (let i = 1; i < n; i++) { if (find(i) !== root) return false; }
+                return true;
+            }
+
+            toCSV() {
+                let lines = ['x,y,number'];
+                for (const island of this.islands) {
+                    lines.push(`${island.x},${island.y},${island.number}`);
+                }
+                return lines.join('\n');
+            }
+
+            static fromCSV(csv, width, height, seed) {
+                const lines = csv.split('\n').map(s => s.trim()).filter(s => s && !s.startsWith('x,'));
+                const islands = [];
+                const used = new Set();
+                for (const line of lines) {
+                    const parts = line.split(',').map(s => s.trim());
+                    if (parts.length < 3) continue;
+                    const x = parseInt(parts[0]), y = parseInt(parts[1]), num = parseInt(parts[2]);
+                    if (isNaN(x) || isNaN(y) || isNaN(num)) continue;
+                    if (x < 0 || y < 0 || x >= width || y >= height) continue;
+                    const key = x + ',' + y;
+                    if (used.has(key)) continue;
+                    used.add(key);
+                    islands.push({ x, y, number: Math.min(8, Math.max(1, num)) });
+                }
+                if (islands.length < 2) return null;
+                const game = new HashiGame(width, height, seed || 0);
+                game.islands = islands.map((p, idx) => ({ ...p, id: idx }));
+                game.bridges = [];
+                game.selected = null;
+                game.solvedState = null;
+                return game;
+            }
+
+            solve() {
+                if (this.solvedState && this.solvedState.bridges) {
+                    this.bridges = clone(this.solvedState.bridges);
+                    return this.checkSolved();
+                }
+                const backup = {
+                    islands: clone(this.islands),
+                    bridges: clone(this.bridges),
+                };
+                let changed = true, iter = 0;
+                while (changed && iter < 200) {
+                    changed = false;
+                    iter++;
+                    const n = this.islands.length;
+                    const degree = Array(n).fill(0);
+                    for (const b of this.bridges) {
+                        degree[b.from] += b.count;
+                        degree[b.to] += b.count;
+                    }
+                    const need = Array(n).fill(0);
+                    for (let i = 0; i < n; i++) need[i] = this.islands[i].number - degree[i];
+                    for (let i = 0; i < n; i++) {
+                        if (need[i] <= 0) continue;
+                        const candidates = [];
+                        for (let j = 0; j < n; j++) {
+                            if (i === j) continue;
+                            if (this.canBuildNewBridge(i, j)) {
+                                const existing = this.getBridgeBetween(i, j);
+                                if (existing) { if (existing.count < 2) candidates.push(j); } else candidates.push(j);
+                            }
+                        }
+                        if (candidates.length > 0 && candidates.length <= need[i]) {
+                            for (const j of candidates) {
+                                const existing = this.getBridgeBetween(i, j);
+                                if (existing) { if (existing.count < 2) { existing.count++; changed = true; } } else { this.bridges.push({ from: i, to: j, count: 1 }); changed = true; }
+                            }
+                        }
+                    }
+                }
+                const solved = this.checkSolved();
+                if (!solved) {
+                    this.islands = backup.islands;
+                    this.bridges = backup.bridges;
+                    return false;
+                }
+                return true;
+            }
+        }
+
+
+        // ================================================================
+        //  渲染器 (固定格子尺寸，滚动条)
+        // ================================================================
+        class HashiRenderer {
+            constructor(canvas) {
+                this.canvas = canvas;
+                this.ctx = canvas.getContext('2d');
+                this.dpr = window.devicePixelRatio || 1;
+                this.game = null;
+                this.onChange = null;
+                this.mode = 'select';
+                this._size = { width: 0, height: 0 };
+                this._isPointerDown = false;
+                this._lastRemoveTarget = null;
+                // 网格固定参数
+                this.cellSize = 62;
+                this.padding = 62;
+                // 视觉配置
+                this.config = {
+                    bridgeLineWidth: 4.5,
+                    coordFontSize: 16,
+                    islandRadiusScale: 0.30,
+                };
+                this.auxDisplay = false;
+                this.flashState = null;
+                this._resize();
+                this._bindEvents();
+            }
+
+            _resize() {
+                // 计算画布总尺寸
+                if (!this.game) {
+                    this.canvas.width = 400;
+                    this.canvas.height = 400;
+                    this.canvas.style.width = '400px';
+                    this.canvas.style.height = '400px';
+                    return;
+                }
+                const w = this.game.width;
+                const h = this.game.height;
+                const cell = this.cellSize;
+                const pad = this.padding;
+                const totalW = (w - 1) * cell + pad * 2;
+                const totalH = (h - 1) * cell + pad * 2;
+                // 确保最小尺寸
+                const minSize = 100;
+                const finalW = Math.max(minSize, totalW);
+                const finalH = Math.max(minSize, totalH);
+                this.canvas.width = finalW;
+                this.canvas.height = finalH;
+                this.canvas.style.width = finalW + 'px';
+                this.canvas.style.height = finalH + 'px';
+                // 清除缩放 (因为canvas尺寸即像素尺寸)
+                this.ctx.setTransform(1, 0, 0, 1, 0, 0);
+                if (this.game) this.render();
+            }
+
+            fitToScreen() {
+                // 仅重新计算尺寸并重绘
+                this._resize();
+            }
+
+            updateConfig(newConfig) {
+                Object.assign(this.config, newConfig);
+                this._resize();
+                if (this.game) this.render();
+                if (this.onConfigChange) this.onConfigChange(this.config);
+            }
+
+            // --- 闪烁控制 ---
+            startFlash(type, islandIndices) {
+                this.stopFlash();
+                const islands = new Set(islandIndices);
+                this.flashState = { type, islands, timer: null, phase: 0 };
+                let count = 0;
+                const maxCount = 6;
+                const interval = 300;
+                const flashFn = () => {
+                    count++;
+                    if (count > maxCount) {
+                        this.stopFlash();
+                        this.render();
+                        return;
+                    }
+                    this.flashState.phase = count % 2;
+                    this.render();
+                };
+                this.flashState.timer = setInterval(flashFn, interval);
+                flashFn();
+            }
+
+            stopFlash() {
+                if (this.flashState && this.flashState.timer) {
+                    clearInterval(this.flashState.timer);
+                }
+                this.flashState = null;
+                if (this.game) this.render();
+            }
+
+            _bindEvents() {
+                const c = this.canvas;
+                c.addEventListener('mousedown', (e) => this._onPointerDown(e));
+                c.addEventListener('mousemove', (e) => this._onPointerMove(e));
+                c.addEventListener('mouseup', (e) => this._onPointerUp(e));
+                c.addEventListener('mouseleave', (e) => this._onPointerUp(e));
+                c.addEventListener('touchstart', (e) => {
+                    e.preventDefault();
+                    const touch = e.touches[0];
+                    const rect = c.getBoundingClientRect();
+                    const x = (touch.clientX - rect.left) * (this.canvas.width / rect.width);
+                    const y = (touch.clientY - rect.top) * (this.canvas.height / rect.height);
+                    this._onPointerDown({ clientX: touch.clientX, clientY: touch.clientY, _x: x, _y: y, touches: e.touches });
+                }, { passive: false });
+                c.addEventListener('touchmove', (e) => {
+                    e.preventDefault();
+                    const touch = e.touches[0];
+                    const rect = c.getBoundingClientRect();
+                    const x = (touch.clientX - rect.left) * (this.canvas.width / rect.width);
+                    const y = (touch.clientY - rect.top) * (this.canvas.height / rect.height);
+                    this._onPointerMove({ clientX: touch.clientX, clientY: touch.clientY, _x: x, _y: y, touches: e.touches });
+                }, { passive: false });
+                c.addEventListener('touchend', (e) => {
+                    e.preventDefault();
+                    this._onPointerUp(e);
+                }, { passive: false });
+                c.addEventListener('contextmenu', (e) => e.preventDefault());
+            }
+
+            _getPos(e) {
+                if (e._x !== undefined) return { x: e._x, y: e._y };
+                const rect = this.canvas.getBoundingClientRect();
+                return {
+                    x: (e.clientX - rect.left) * (this.canvas.width / rect.width),
+                    y: (e.clientY - rect.top) * (this.canvas.height / rect.height)
+                };
+            }
+
+            _onPointerDown(e) {
+                this._isPointerDown = true;
+                const pos = this._getPos(e);
+                if (e.touches && e.touches.length >= 2) return;
+                if (this.mode === 'knife') {
+                    this._tryRemoveBridgeAt(pos.x, pos.y);
+                } else {
+                    this._handleClickAt(pos.x, pos.y);
+                }
+            }
+
+            _onPointerMove(e) {
+                if (!this._isPointerDown) return;
+                if (this.mode === 'knife') {
+                    const pos = this._getPos(e);
+                    this._tryRemoveBridgeAt(pos.x, pos.y);
+                }
+            }
+
+            _onPointerUp(e) {
+                this._isPointerDown = false;
+                this._lastRemoveTarget = null;
+            }
+
+            _pixelToGrid(px, py) {
+                return {
+                    x: (px - this.padding) / this.cellSize,
+                    y: (py - this.padding) / this.cellSize
+                };
+            }
+
+            _gridToPixel(gx, gy) {
+                return {
+                    x: gx * this.cellSize + this.padding,
+                    y: gy * this.cellSize + this.padding
+                };
+            }
+
+            _tryRemoveBridgeAt(px, py) {
+                if (!this.game) return;
+                const threshold = 10;
+                let bestBridge = null, bestDist = Infinity;
+                for (const br of this.game.bridges) {
+                    const f = this.game.islands[br.from];
+                    const t = this.game.islands[br.to];
+                    const p1 = this._gridToPixel(f.x, f.y);
+                    const p2 = this._gridToPixel(t.x, t.y);
+                    const dist = this._distToSegment(px, py, p1.x, p1.y, p2.x, p2.y);
+                    if (dist < threshold && dist < bestDist) {
+                        bestDist = dist;
+                        bestBridge = br;
+                    }
+                }
+                if (bestBridge) {
+                    const key = Math.min(bestBridge.from, bestBridge.to) + ',' + Math.max(bestBridge.from, bestBridge.to);
+                    if (this._lastRemoveTarget === key) return;
+                    this._lastRemoveTarget = key;
+                    const from = bestBridge.from, to = bestBridge.to;
+                    if (this.game.removeBridge(from, to)) {
+                        this.render();
+                        this._onChange();
+                    }
+                }
+            }
+
+            _distToSegment(px, py, x1, y1, x2, y2) {
+                const dx = x2 - x1, dy = y2 - y1;
+                const len2 = dx * dx + dy * dy;
+                if (len2 === 0) return Math.hypot(px - x1, py - y1);
+                let t = ((px - x1) * dx + (py - y1) * dy) / len2;
+                t = Math.max(0, Math.min(1, t));
+                const cx = x1 + t * dx, cy = y1 + t * dy;
+                return Math.hypot(px - cx, py - cy);
+            }
+
+            _handleClickAt(px, py) {
+                if (!this.game) return;
+                const idx = this._hitTest(px, py);
+                if (idx === null) {
+                    this.game.selected = null;
+                    this.render();
+                    return;
+                }
+                if (this.game.selected === null) {
+                    this.game.selected = idx;
+                    this.render();
+                    return;
+                }
+                if (this.game.selected === idx) {
+                    this.game.selected = null;
+                    this.render();
+                    return;
+                }
+                const from = this.game.selected, to = idx;
+                const existing = this.game.getBridgeBetween(from, to);
+                const degFrom = this.game.getDegree(from);
+                const degTo = this.game.getDegree(to);
+                const targetFrom = this.game.islands[from].number;
+                const targetTo = this.game.islands[to].number;
+
+                if (existing) {
+                    if (degFrom >= targetFrom || degTo >= targetTo) {
+                        this.game.removeAllBridges(from, to);
+                        this.game.selected = null;
+                        this.render();
+                        this._onChange();
+                        this._toast('已拆除该路径所有桥梁', '');
+                        return;
+                    }
+                    if (existing.count < 2) {
+                        if (this.game.addBridge(from, to)) {
+                            this.game.selected = null;
+                            this.render();
+                            this._onChange();
+                        } else {
+                            this._toast('无法增加桥梁', 'error');
+                            this.game.selected = null;
+                            this.render();
+                        }
+                    } else {
+                        this.game.removeAllBridges(from, to);
+                        this.game.selected = null;
+                        this.render();
+                        this._onChange();
+                        this._toast('已拆除该路径所有桥梁', '');
+                    }
+                } else {
+                    if (degFrom >= targetFrom) {
+                        this._toast('选中的岛屿已达到上限', 'error');
+                        this.game.selected = null;
+                        this.render();
+                        return;
+                    }
+                    if (degTo >= targetTo) {
+                        this._toast('目标岛屿已达到上限', 'error');
+                        this.game.selected = null;
+                        this.render();
+                        return;
+                    }
+                    if (this.game.addBridge(from, to)) {
+                        this.game.selected = null;
+                        this.render();
+                        this._onChange();
+                    } else {
+                        this.game.selected = null;
+                        this.render();
+                        this._toast('无法建桥：路径被阻挡或已达岛屿上限', 'error');
+                    }
+                }
+            }
+
+            _hitTest(px, py) {
+                if (!this.game || !this.game.islands.length) return null;
+                const hitRadius = 12;
+                for (let i = this.game.islands.length - 1; i >= 0; i--) {
+                    const p = this.game.islands[i];
+                    const pos = this._gridToPixel(p.x, p.y);
+                    const dx = px - pos.x, dy = py - pos.y;
+                    if (dx * dx + dy * dy < hitRadius * hitRadius) return i;
+                }
+                return null;
+            }
+
+            _onChange() {
+                if (this.onChange) this.onChange(this.game);
+            }
+
+            _toast(msg, type) {
+                const el = document.getElementById('toast');
+                el.textContent = msg;
+                el.className = 'toast';
+                if (type) el.classList.add(type);
+                el.classList.add('show');
+                clearTimeout(el._hide);
+                el._hide = setTimeout(() => el.classList.remove('show'), 2500);
+            }
+
+            render(game) {
+                if (game) this.game = game;
+                if (!this.game) return;
+                const ctx = this.ctx;
+                const w = this.canvas.width, h = this.canvas.height;
+                ctx.clearRect(0, 0, w, h);
+
+                const { islands, bridges, width, height, selected } = this.game;
+                const cell = this.cellSize;
+                const pad = this.padding;
+                const cfg = this.config;
+                const flash = this.flashState;
+                const aux = this.auxDisplay;
+
+                // 绘制网格
+                ctx.strokeStyle = 'rgba(255,255,255,0.07)';
+                ctx.lineWidth = 0.5;
+                for (let x = 0; x < width; x++) {
+                    const px = x * cell + pad;
+                    ctx.beginPath();
+                    ctx.moveTo(px, pad);
+                    ctx.lineTo(px, (height - 1) * cell + pad);
+                    ctx.stroke();
+                }
+                for (let y = 0; y < height; y++) {
+                    const py = y * cell + pad;
+                    ctx.beginPath();
+                    ctx.moveTo(pad, py);
+                    ctx.lineTo((width - 1) * cell + pad, py);
+                    ctx.stroke();
+                }
+
+                // 计算岛屿半径
+                const r = Math.max(4, cell * cfg.islandRadiusScale);
+                const coordOffset = r + 12;
+
+                // 坐标
+                const fontSize = Math.max(8, Math.min(18, cell * cfg.islandRadiusScale * 1.2));
+                ctx.fillStyle = 'rgba(255,255,255,0.40)';
+                ctx.font = `${fontSize}px monospace`;
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'bottom';
+                for (let x = 0; x < width; x++) {
+                    const px = x * cell + pad;
+                    if (px > 0 && px < w) {
+                        ctx.fillText(x, px, pad - coordOffset);
+                    }
+                }
+                ctx.textAlign = 'right';
+                ctx.textBaseline = 'middle';
+                for (let y = 0; y < height; y++) {
+                    const py = y * cell + pad;
+                    if (py > 0 && py < h) {
+                        ctx.fillText(y, pad - coordOffset, py);
+                    }
+                }
+
+                // 桥梁
+                const lineWidth = cfg.bridgeLineWidth;
+                const bridgeColor = '#64d8ff';
+                const bridgeGlow = 'rgba(100,216,255,0.20)';
+                for (const b of bridges) {
+                    const from = islands[b.from], to = islands[b.to];
+                    const p1 = this._gridToPixel(from.x, from.y);
+                    const p2 = this._gridToPixel(to.x, to.y);
+                    const dx = p2.x - p1.x, dy = p2.y - p1.y;
+                    const len = Math.sqrt(dx * dx + dy * dy);
+                    if (len < 0.01) continue;
+                    const nx = -dy / len, ny = dx / len;
+                    const off = Math.min(4, cell * 0.12);
+                    const drawBridge = (off2) => {
+                        const ox = p1.x + nx * off2, oy = p1.y + ny * off2;
+                        const ox2 = p2.x + nx * off2, oy2 = p2.y + ny * off2;
+                        ctx.beginPath();
+                        ctx.moveTo(ox, oy);
+                        ctx.lineTo(ox2, oy2);
+                        ctx.strokeStyle = bridgeColor;
+                        ctx.lineWidth = lineWidth;
+                        ctx.shadowColor = bridgeGlow;
+                        ctx.shadowBlur = 6;
+                        ctx.stroke();
+                        ctx.shadowBlur = 0;
+                    };
+                    if (b.count === 1) drawBridge(0);
+                    else { drawBridge(-off); drawBridge(off); }
+                }
+
+                // 辅助状态 (黄绿)
+                const status = [];
+                if (aux) {
+                    for (let i = 0; i < islands.length; i++) {
+                        const deg = this.game.getDegree(i);
+                        const target = islands[i].number;
+                        if (deg < target) status[i] = 'yellow';
+                        else if (deg === target) status[i] = 'green';
+                    }
+                }
+
+                // 岛屿
+                for (let i = 0; i < islands.length; i++) {
+                    const p = islands[i];
+                    const pos = this._gridToPixel(p.x, p.y);
+                    const isSelected = (selected === i);
+
+                    let flashColor = null;
+                    if (flash && flash.islands.has(i)) {
+                        if (flash.type === 'red') flashColor = '#ff4444';
+                        else if (flash.type === 'green') flashColor = '#44ff88';
+                        else if (flash.type === 'blue') flashColor = '#44aaff';
+                        if (flash.phase === 0) flashColor = null;
+                    }
+
+                    let borderColor = null;
+                    if (aux && !flashColor) {
+                        if (status[i] === 'yellow') borderColor = '#f5c542';
+                        else if (status[i] === 'green') borderColor = '#4cd9a0';
+                    }
+
+                    const grad = ctx.createRadialGradient(pos.x, pos.y, 0, pos.x, pos.y, r * 1.8);
+                    if (isSelected) {
+                        grad.addColorStop(0, 'rgba(245,197,66,0.25)');
+                        grad.addColorStop(1, 'rgba(245,197,66,0)');
+                    } else if (flashColor) {
+                        const col = flashColor;
+                        grad.addColorStop(0, col + '40');
+                        grad.addColorStop(1, col + '00');
+                    } else {
+                        grad.addColorStop(0, 'rgba(100,216,255,0.08)');
+                        grad.addColorStop(1, 'rgba(100,216,255,0)');
+                    }
+                    ctx.beginPath();
+                    ctx.arc(pos.x, pos.y, r * 1.8, 0, Math.PI * 2);
+                    ctx.fillStyle = grad;
+                    ctx.fill();
+
+                    let bg = isSelected ? '#f5c542' : '#1f2c44';
+                    let border = isSelected ? '#f5c542' : 'rgba(255,255,255,0.15)';
+                    if (flashColor) {
+                        bg = flashColor;
+                        border = flashColor;
+                    } else if (borderColor) {
+                        border = borderColor;
+                        ctx.lineWidth = 2.5;
+                    }
+                    ctx.beginPath();
+                    ctx.arc(pos.x, pos.y, r, 0, Math.PI * 2);
+                    ctx.fillStyle = bg;
+                    ctx.fill();
+                    ctx.strokeStyle = border;
+                    ctx.lineWidth = (borderColor || flashColor) ? 2.5 : (isSelected ? 1.5 : 1);
+                    ctx.stroke();
+
+                    if (flashColor) {
+                        ctx.shadowColor = flashColor;
+                        ctx.shadowBlur = 20;
+                        ctx.beginPath();
+                        ctx.arc(pos.x, pos.y, r, 0, Math.PI * 2);
+                        ctx.fillStyle = bg;
+                        ctx.fill();
+                        ctx.strokeStyle = border;
+                        ctx.lineWidth = 2.5;
+                        ctx.stroke();
+                        ctx.shadowBlur = 0;
+                    }
+
+                    let textColor = '#eef5ff';
+                    if (isSelected || flashColor) {
+                        textColor = '#0b0e17';
+                    }
+                    const textSize = fontSize * 0.9;
+                    ctx.fillStyle = textColor;
+                    ctx.font = `600 ${textSize}px "Inter", system-ui, sans-serif`;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(p.number, pos.x, pos.y + 1);
+
+                    if (isSelected) {
+                        ctx.beginPath();
+                        ctx.arc(pos.x, pos.y, r + 2, 0, Math.PI * 2);
+                        ctx.strokeStyle = 'rgba(245,197,66,0.40)';
+                        ctx.lineWidth = 1.5;
+                        ctx.setLineDash([2, 4]);
+                        ctx.stroke();
+                        ctx.setLineDash([]);
+                    }
+                }
+            }
+        }
+
+
+        // ================================================================
+        //  应用控制器
+        // ================================================================
+        class App {
+            constructor() {
+                this.canvas = document.getElementById('gameCanvas');
+                this.renderer = new HashiRenderer(this.canvas);
+                this.renderer.onChange = (game) => this._updateUI(game);
+
+                this.seedInput = document.getElementById('seedInput');
+                this.widthInput = document.getElementById('widthInput');
+                this.heightInput = document.getElementById('heightInput');
+                this.progressText = document.getElementById('progressText');
+                this.progressFill = document.getElementById('progressFill');
+                this.statusDot = document.getElementById('statusDot');
+                this.statusText = document.getElementById('statusText');
+                this.seedHash = document.getElementById('seedHash');
+                this.canvasWrap = document.getElementById('canvasWrap');
+                this.btnKnife = document.getElementById('btnKnife');
+                this.btnAux = document.getElementById('btnAux');
+
+                this.debug = false;
+                this._bindControls();
+                this._loadFromHash();
+                this._generate();
+
+                // 窗口大小变化时，只调整容器，不改变canvas尺寸
+                window.addEventListener('resize', () => {
+                    // canvas尺寸不变，无需重绘
+                });
+
+                document.getElementById('logo').addEventListener('dblclick', () => {
+                    this.debug = !this.debug;
+                    document.getElementById('debugPanel').classList.toggle('show', this.debug);
+                    if (this.debug) this._updateDebugState();
+                });
+
+                this.btnAux.addEventListener('click', () => {
+                    this.renderer.auxDisplay = !this.renderer.auxDisplay;
+                    this.btnAux.classList.toggle('active', this.renderer.auxDisplay);
+                    if (this.game) this.renderer.render(this.game);
+                });
+
+                window.__app = this;
+                console.log('💡 双击标题栏 "🌉 数桥" 开启调试面板');
+            }
+
+            _bindControls() {
+                document.getElementById('btnGenerate').addEventListener('click', () => this._generate());
+                document.getElementById('btnRandomSeed').addEventListener('click', () => {
+                    const seed = Math.floor(Math.random() * 2147483647);
+                    this.seedInput.value = seed;
+                    this._generate();
+                });
+                document.getElementById('btnResetBridges').addEventListener('click', () => {
+                    if (!this.game) return;
+                    this.game.resetBridges();
+                    this.renderer.render(this.game);
+                    this._updateUI(this.game);
+                    this._toast('已清空所有桥梁', 'success');
+                });
+                document.getElementById('btnCheck').addEventListener('click', () => {
+                    if (!this.game) return;
+                    this._runCheck();
+                });
+                document.getElementById('btnSolve').addEventListener('click', () => {
+                    if (!this.game) return;
+                    if (this.game.solve()) {
+                        this.renderer.render(this.game);
+                        this._updateUI(this.game);
+                        this._toast('🧩 求解成功！', 'success');
+                    } else {
+                        this._toast('⚠️ 当前谜题无法用简单规则求解，请手动尝试', 'error');
+                    }
+                });
+                document.getElementById('btnImport').addEventListener('click', () => this._importCSV());
+                document.getElementById('btnExport').addEventListener('click', () => this._exportCSV());
+                document.getElementById('btnExportImage').addEventListener('click', () => this._exportImage());
+
+                this.btnKnife.addEventListener('click', () => {
+                    const isKnife = this.renderer.mode === 'knife';
+                    this.renderer.mode = isKnife ? 'select' : 'knife';
+                    this.btnKnife.classList.toggle('active', !isKnife);
+                    this.canvasWrap.classList.toggle('knife', !isKnife);
+                    this._toast(this.renderer.mode === 'knife' ? '🔪 美工刀已开启，滑动清除桥梁' : '🔧 已切换回选择模式', '');
+                });
+
+                document.querySelectorAll('.preset-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const w = parseInt(btn.dataset.w);
+                        const h = parseInt(btn.dataset.h);
+                        this.widthInput.value = w;
+                        this.heightInput.value = h;
+                        this._generate();
+                    });
+                });
+
+                this._bindDebugControls();
+
+                this.seedInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') this._generate(); });
+                this.widthInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') this._generate(); });
+                this.heightInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') this._generate(); });
+            }
+
+            _runCheck() {
+                if (!this.game) return;
+                const game = this.game;
+                const n = game.islands.length;
+                const degree = Array(n).fill(0);
+                for (const b of game.bridges) {
+                    degree[b.from] += b.count;
+                    degree[b.to] += b.count;
+                }
+                const mismatched = [];
+                const matched = [];
+                for (let i = 0; i < n; i++) {
+                    if (degree[i] === game.islands[i].number) {
+                        matched.push(i);
+                    } else {
+                        mismatched.push(i);
+                    }
+                }
+
+                this.renderer.stopFlash();
+
+                if (mismatched.length > 0) {
+                    this.renderer.startFlash('red', mismatched);
+                    this._toast(`有 ${mismatched.length} 个岛屿未完成`, 'error');
+                } else {
+                    if (game.checkSolved()) {
+                        this.renderer.startFlash('blue', Array.from({ length: n }, (_, i) => i));
+                        this._toast('🎉 全部完成！', 'success');
+                    } else {
+                        this.renderer.startFlash('green', Array.from({ length: n }, (_, i) => i));
+                        this._toast('所有岛屿数字匹配，但桥梁未连通', '');
+                    }
+                }
+                this._updateDebugState();
+            }
+
+            _bindDebugControls() {
+                const config = this.renderer.config;
+                const renderer = this.renderer;
+
+                // 格子大小
+                const bindCellSize = () => {
+                    const slider = document.getElementById('cfgCellSize');
+                    const num = document.getElementById('cfgCellSizeNum');
+                    if (!slider || !num) return;
+                    const update = () => {
+                        const val = parseInt(num.value);
+                        if (isNaN(val)) return;
+                        slider.value = val;
+                        renderer.cellSize = val;
+                        renderer._resize();
+                        this._updateDebugState();
+                    };
+                    slider.addEventListener('input', () => {
+                        const val = parseInt(slider.value);
+                        num.value = val;
+                        renderer.cellSize = val;
+                        renderer._resize();
+                        this._updateDebugState();
+                    });
+                    num.addEventListener('input', update);
+                    slider.value = renderer.cellSize;
+                    num.value = renderer.cellSize;
+                };
+                bindCellSize();
+
+                // 其他配置
+                const bindSliderNumber = (sliderId, numId, key, formatter = v => parseFloat(v)) => {
+                    const slider = document.getElementById(sliderId);
+                    const num = document.getElementById(numId);
+                    if (!slider || !num) return;
+                    const update = () => {
+                        const val = formatter(num.value);
+                        slider.value = val;
+                        config[key] = val;
+                        renderer.updateConfig({ [key]: val });
+                        this._updateDebugState();
+                    };
+                    slider.addEventListener('input', () => {
+                        const val = parseFloat(slider.value);
+                        num.value = val;
+                        config[key] = val;
+                        renderer.updateConfig({ [key]: val });
+                        this._updateDebugState();
+                    });
+                    num.addEventListener('input', () => {
+                        let val = parseFloat(num.value);
+                        if (isNaN(val)) return;
+                        if (key === 'islandRadiusScale') val = Math.min(0.5, Math.max(0.1, val));
+                        else if (key === 'bridgeLineWidth') val = Math.min(8, Math.max(1, val));
+                        else if (key === 'coordFontSize') val = Math.min(28, Math.max(8, val));
+                        slider.value = val;
+                        config[key] = val;
+                        renderer.updateConfig({ [key]: val });
+                        this._updateDebugState();
+                    });
+                    slider.value = config[key];
+                    num.value = config[key];
+                };
+                bindSliderNumber('cfgBridgeWidth', 'cfgBridgeWidthNum', 'bridgeLineWidth');
+                bindSliderNumber('cfgCoordSize', 'cfgCoordSizeNum', 'coordFontSize');
+                bindSliderNumber('cfgIslandSize', 'cfgIslandSizeNum', 'islandRadiusScale');
+
+                const padSlider = document.getElementById('cfgPadding');
+                const padNum = document.getElementById('cfgPaddingNum');
+                padSlider.addEventListener('input', () => {
+                    const val = parseInt(padSlider.value);
+                    padNum.value = val;
+                    renderer.padding = val;
+                    renderer._resize();
+                    this._updateDebugState();
+                });
+                padNum.addEventListener('input', () => {
+                    let val = parseInt(padNum.value);
+                    if (isNaN(val)) return;
+                    val = Math.min(80, Math.max(20, val));
+                    padSlider.value = val;
+                    renderer.padding = val;
+                    renderer._resize();
+                    this._updateDebugState();
+                });
+
+                document.getElementById('debugResetDefaults').addEventListener('click', () => {
+                    const defaults = {
+                        bridgeLineWidth: 4,
+                        coordFontSize: 16,
+                        islandRadiusScale: 0.20,
+                    };
+                    Object.assign(config, defaults);
+                    renderer.cellSize = 40;
+                    renderer.padding = 45;
+                    document.getElementById('cfgCellSize').value = 40;
+                    document.getElementById('cfgCellSizeNum').value = 40;
+                    document.getElementById('cfgBridgeWidth').value = defaults.bridgeLineWidth;
+                    document.getElementById('cfgBridgeWidthNum').value = defaults.bridgeLineWidth;
+                    document.getElementById('cfgCoordSize').value = defaults.coordFontSize;
+                    document.getElementById('cfgCoordSizeNum').value = defaults.coordFontSize;
+                    document.getElementById('cfgIslandSize').value = defaults.islandRadiusScale;
+                    document.getElementById('cfgIslandSizeNum').value = defaults.islandRadiusScale;
+                    document.getElementById('cfgPadding').value = 45;
+                    document.getElementById('cfgPaddingNum').value = 45;
+                    renderer.updateConfig(defaults);
+                    renderer._resize();
+                    this._updateDebugState();
+                    this._toast('视觉配置已重置为默认', 'success');
+                });
+
+                document.getElementById('debugRefreshState').addEventListener('click', () => this._updateDebugState());
+
+                document.getElementById('dbgShowIsolated').addEventListener('click', () => {
+                    if (!this.game) return;
+                    const isolated = [];
+                    for (let i = 0; i < this.game.islands.length; i++) {
+                        if (this.game.getDegree(i) === 0) isolated.push(i);
+                    }
+                    if (isolated.length) {
+                        this._toast(`孤立岛索引: ${isolated.join(', ')}`, 'error');
+                    } else {
+                        this._toast('没有孤立岛屿', 'success');
+                    }
+                });
+                document.getElementById('dbgForceConnect').addEventListener('click', () => {
+                    if (!this.game) return;
+                    let added = 0;
+                    for (let i = 0; i < this.game.islands.length; i++) {
+                        if (this.game.getDegree(i) === 0) {
+                            let best = -1, bestDist = Infinity;
+                            for (let j = 0; j < this.game.islands.length; j++) {
+                                if (i === j) continue;
+                                const a = this.game.islands[i], b = this.game.islands[j];
+                                if (a.x === b.x || a.y === b.y) {
+                                    const dist = a.x === b.x ? Math.abs(a.y - b.y) : Math.abs(a.x - b.x);
+                                    if (dist < bestDist) { bestDist = dist; best = j; }
+                                }
+                            }
+                            if (best !== -1) {
+                                const existing = this.game.getBridgeBetween(i, best);
+                                if (existing) {
+                                    if (existing.count < 2) { existing.count++; added++; }
+                                } else {
+                                    this.game.bridges.push({ from: i, to: best, count: 1 });
+                                    added++;
+                                }
+                            }
+                        }
+                    }
+                    if (added) {
+                        this.renderer.render(this.game);
+                        this._updateUI(this.game);
+                        this._toast(`强制添加了 ${added} 座桥`, 'success');
+                    } else {
+                        this._toast('没有需要连接的孤立岛', '');
+                    }
+                });
+                document.getElementById('dbgLogState').addEventListener('click', () => {
+                    if (!this.game) return;
+                    console.log('岛屿:', this.game.islands.map((p, i) => ({ idx: i, ...p, degree: this.game.getDegree(i) })));
+                    console.log('桥梁:', this.game.bridges);
+                    console.log('已解决?', this.game.checkSolved());
+                    this._toast('状态已输出到控制台', '');
+                });
+            }
+
+            _generate() {
+                const seedStr = this.seedInput.value.trim() || '20260905';
+                const seed = hashString(seedStr);
+                const w = parseInt(this.widthInput.value) || 7;
+                const h = parseInt(this.heightInput.value) || 7;
+                if (w < 4 || h < 4 || w > 256 || h > 256) {
+                    this._toast('尺寸范围 4~256', 'error');
+                    return;
+                }
+                this.game = new HashiGame(w, h, seed);
+                // 关键：同步游戏对象到渲染器
+                this.renderer.game = this.game;
+                this.renderer._resize();
+                this.renderer.render(this.game);
+                this._updateUI(this.game);
+                this.seedHash.textContent = '#' + seed.toString(16).padStart(8, '0');
+                const params = new URLSearchParams();
+                params.set('seed', seedStr);
+                params.set('w', w);
+                params.set('h', h);
+                history.replaceState(null, '', '?' + params.toString());
+                this._toast(`生成新棋盘 ${w}×${h} · 岛屿 ${this.game.islands.length} 个`, '');
+                if (this.debug) this._updateDebugState();
+                this.renderer.stopFlash();
+            }
+
+            _loadFromHash() {
+                const params = new URLSearchParams(window.location.search);
+                const seed = params.get('seed');
+                const w = params.get('w');
+                const h = params.get('h');
+                if (seed) this.seedInput.value = seed;
+                if (w) this.widthInput.value = w;
+                if (h) this.heightInput.value = h;
+            }
+
+            _getProgress() {
+                if (!this.game) return { done: 0, total: 0 };
+                const total = this.game.islands.length;
+                let done = 0;
+                for (let i = 0; i < total; i++) {
+                    if (this.game.getDegree(i) === this.game.islands[i].number) done++;
+                }
+                return { done, total };
+            }
+
+            _updateUI(game) {
+                if (!game) return;
+                const progress = this._getProgress();
+                this.progressText.textContent = `${progress.done} / ${progress.total}`;
+                const pct = progress.total > 0 ? (progress.done / progress.total * 100) : 0;
+                this.progressFill.style.width = Math.min(100, pct) + '%';
+
+                const solved = game.checkSolved();
+                if (solved) {
+                    this.statusDot.className = 'dot green';
+                    this.statusText.textContent = '已完成 ✅';
+                } else if (progress.done === progress.total && progress.total > 0) {
+                    this.statusDot.className = 'dot amber';
+                    this.statusText.textContent = '数字匹配，检查连通性';
+                } else {
+                    this.statusDot.className = 'dot';
+                    this.statusText.textContent = `游戏中 (${progress.done}/${progress.total})`;
+                }
+                if (this.debug) this._updateDebugState();
+            }
+
+            _updateDebugState() {
+                const info = document.getElementById('debugStateInfo');
+                if (!this.game) {
+                    info.textContent = '无游戏数据';
+                    return;
+                }
+                const progress = this._getProgress();
+                const solved = this.game.checkSolved();
+                const lines = [
+                    `岛屿: ${this.game.islands.length}`,
+                    `进度: ${progress.done}/${progress.total}`,
+                    `状态: ${solved ? '✅ 已解决' : '🔄 进行中'}`,
+                    `桥数: ${this.game.bridges.length}`,
+                    `格子大小: ${this.renderer.cellSize}px`,
+                    `边距: ${this.renderer.padding}px`,
+                ];
+                info.textContent = lines.join('\n');
+            }
+
+            _toast(msg, type = '') {
+                const el = document.getElementById('toast');
+                el.textContent = msg;
+                el.className = 'toast';
+                if (type) el.classList.add(type);
+                el.classList.add('show');
+                clearTimeout(el._hide);
+                el._hide = setTimeout(() => el.classList.remove('show'), 2800);
+            }
+
+            _exportCSV() {
+                if (!this.game) return;
+                const csv = this.game.toCSV();
+                const blob = new Blob([csv], { type: 'text/csv' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                const seed = this.seedInput.value.trim() || 'unknown';
+                a.download = `hashi_${seed}_${this.game.width}x${this.game.height}.csv`;
+                a.click();
+                URL.revokeObjectURL(url);
+                this._toast('📥 CSV 导出成功', 'success');
+            }
+
+            _exportImage() {
+                if (!this.game) return;
+                const canvas = this.renderer.canvas;
+                const link = document.createElement('a');
+                link.download = `hashi_${this.seedInput.value.trim() || 'unknown'}_${this.game.width}x${this.game.height}.png`;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+                this._toast('🖼️ 图片导出成功', 'success');
+            }
+
+            _importCSV() {
+                const input = document.createElement('input');
+                input.type = 'file';
+                input.accept = '.csv';
+                input.onchange = (e) => {
+                    const file = e.target.files[0];
+                    if (!file) return;
+                    const reader = new FileReader();
+                    reader.onload = (ev) => {
+                        const csv = ev.target.result;
+                        const w = parseInt(this.widthInput.value) || 7;
+                        const h = parseInt(this.heightInput.value) || 7;
+                        const seedStr = this.seedInput.value.trim() || '20260905';
+                        const seed = hashString(seedStr);
+                        const game = HashiGame.fromCSV(csv, w, h, seed);
+                        if (!game) {
+                            this._toast('⚠️ CSV 格式无效，请检查', 'error');
+                            return;
+                        }
+                        this.game = game;
+                        this.renderer._resize();
+                        this.renderer.render(this.game);
+                        this._updateUI(this.game);
+                        this.seedHash.textContent = '#' + seed.toString(16).padStart(8, '0');
+                        this._toast('📂 CSV 导入成功！', 'success');
+                    };
+                    reader.readAsText(file);
+                };
+                input.click();
+            }
+        }
+
+        // ================================================================
+        //  启动
+        // ================================================================
+        document.addEventListener('DOMContentLoaded', () => {
+            const app = new App();
+            window.__app = app;
+            console.log('💡 双击标题栏 "🌉 数桥" 开启调试面板');
+        });
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(reg => {
+                        console.log('✅ SW 注册成功，scope:', reg.scope);
+
+                        // 监听新版本：当 SW 更新了就提示用户
+                        reg.addEventListener('updatefound', () => {
+                            const newWorker = reg.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // 有新版本可用
+                                    console.log('🔄 检测到新版本，刷新后生效');
+                                    // 你要的话可以在这里弹个 toast，或者直接自动刷新
+                                    // location.reload();
+                                }
+                            });
+                        });
+                    })
+                    .catch(err => console.error('❌ SW 注册失败:', err));
+            });
+        }
+    </script>
+</body>
+
+</html>

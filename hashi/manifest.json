@@ -1,0 +1,31 @@
+{
+    "name": "数桥 · Hashiwokakero",
+    "short_name": "数桥",
+    "description": "一个可离线游玩的数桥谜题",
+    "start_url": ".",
+    "scope": ".",
+    "display": "standalone",
+    "orientation": "any",
+    "background_color": "#0b0e17",
+    "theme_color": "#0b0e17",
+    "icons": [
+        {
+            "src": "icons/192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "icons/512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "icons/512-maskable.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
