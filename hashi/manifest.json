@@ -1,31 +1,52 @@
 {
-    "name": "数桥 · Hashiwokakero",
-    "short_name": "数桥",
-    "description": "一个可离线游玩的数桥谜题",
-    "start_url": ".",
-    "scope": ".",
-    "display": "standalone",
-    "orientation": "any",
-    "background_color": "#0b0e17",
-    "theme_color": "#0b0e17",
-    "icons": [
-        {
-            "src": "icons/192.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "any"
-        },
-        {
-            "src": "icons/512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "any"
-        },
-        {
-            "src": "icons/512-maskable.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "maskable"
-        }
-    ]
+  "name": "数桥 · Hashiwokakero",
+  "short_name": "数桥Hashi",
+  "description": "一个可离线游玩的数桥谜题",
+  "start_url": "./index.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0f131e",
+  "theme_color": "#5abfdc",
+  "icons": [
+    {
+      "src": "icons/192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/wide.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "桌面端游戏界面"
+    },
+    {
+      "src": "screenshots/narrow.png",
+      "sizes": "625x996",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "手机端游戏界面"
+    }
+  ],
+  "id": "authorzixi.hashi.app",
+  "categories": [
+    "entertainment",
+    "games"
+  ]
 }
