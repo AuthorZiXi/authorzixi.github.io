@@ -8,7 +8,7 @@
 const IS_DEV = ['localhost', '127.0.0.1', '[::1]'].includes(self.location.hostname);
 
 // 只有生产环境才需要动这个
-const CACHE_NAME = 'hashi-v1.7';
+const CACHE_NAME = 'hashi-v1.7.1';
 
 const PRECACHE = [
     './',

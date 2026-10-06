@@ -1,3 +1,31 @@
+// ===== 两种主题下 Canvas 内部用的颜色 =====
+const RENDER_COLORS = {
+    dark: {
+        gridLine: 'rgba(255, 255, 255, 0.07)',
+        coord: 'rgba(255, 255, 255, 0.40)',
+        bridge: '#64d8ff',
+        bridgeGlow: 'rgba(100, 216, 255, 0.20)',
+        islandBg: '#1f2c44',
+        islandBorder: 'rgba(255, 255, 255, 0.15)',
+        islandText: '#eef5ff',
+        islandTextOn: '#0b0e17',
+        halo0: 'rgba(100, 216, 255, 0.08)',
+        halo1: 'rgba(100, 216, 255, 0)',
+    },
+    light: {
+        gridLine: 'rgba(0, 0, 0, 0.06)',
+        coord: 'rgba(0, 0, 0, 0.35)',
+        bridge: '#2a8bcc',
+        bridgeGlow: 'rgba(42, 139, 204, 0.18)',
+        islandBg: '#ffffff',
+        islandBorder: 'rgba(0, 0, 0, 0.16)',
+        islandText: '#16202e',
+        islandTextOn: '#ffffff',
+        halo0: 'rgba(42, 139, 204, 0.10)',
+        halo1: 'rgba(42, 139, 204, 0)',
+    }
+};
+
 // ================================================================
 //  渲染器 (固定格子尺寸，滚动条)
 // ================================================================
@@ -29,6 +57,7 @@ export class HashiRenderer {
             islandRadiusScale: 0.30,
         };
         this.auxDisplay = false;
+        this.theme = 'dark';
         this.flashState = null;
         this._resize();
         this._bindEvents();
@@ -88,6 +117,11 @@ export class HashiRenderer {
         this._resize();
         if (this.game) this.render();
         if (this.onConfigChange) this.onConfigChange(this.config);
+    }
+
+    setTheme(theme) {
+        this.theme = theme === 'light' ? 'light' : 'dark';
+        if (this.game) this.render();
     }
 
     // --- 闪烁控制 ---
@@ -399,9 +433,10 @@ export class HashiRenderer {
         const cfg = this.config;
         const flash = this.flashState;
         const aux = this.auxDisplay;
+        const C = RENDER_COLORS[this.theme] || RENDER_COLORS.dark;
 
         // 绘制网格
-        ctx.strokeStyle = 'rgba(255,255,255,0.07)';
+        ctx.strokeStyle = ctx.strokeStyle = C.gridLine;;
         ctx.lineWidth = 0.5;
         for (let x = 0; x < width; x++) {
             const px = x * cell + pad;
@@ -424,7 +459,7 @@ export class HashiRenderer {
 
         // 坐标
         const fontSize = Math.max(8, Math.min(18, cell * cfg.islandRadiusScale * 1.2));
-        ctx.fillStyle = 'rgba(255,255,255,0.40)';
+        ctx.fillStyle = ctx.fillStyle = C.coord;
         ctx.font = `${fontSize}px monospace`;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'bottom';
@@ -445,8 +480,8 @@ export class HashiRenderer {
 
         // 桥梁
         const lineWidth = cfg.bridgeLineWidth;
-        const bridgeColor = '#64d8ff';
-        const bridgeGlow = 'rgba(100,216,255,0.20)';
+        const bridgeColor = C.bridge;
+        const bridgeGlow = C.bridgeGlow;
         for (const b of bridges) {
             const from = islands[b.from], to = islands[b.to];
             const p1 = this._gridToPixel(from.x, from.y);
@@ -513,16 +548,16 @@ export class HashiRenderer {
                 grad.addColorStop(0, col + '40');
                 grad.addColorStop(1, col + '00');
             } else {
-                grad.addColorStop(0, 'rgba(100,216,255,0.08)');
-                grad.addColorStop(1, 'rgba(100,216,255,0)');
+                grad.addColorStop(0, C.halo0);
+                grad.addColorStop(1, C.halo1);
             }
             ctx.beginPath();
             ctx.arc(pos.x, pos.y, r * 1.8, 0, Math.PI * 2);
             ctx.fillStyle = grad;
             ctx.fill();
 
-            let bg = isSelected ? '#f5c542' : '#1f2c44';
-            let border = isSelected ? '#f5c542' : 'rgba(255,255,255,0.15)';
+            let bg = isSelected ? '#f5c542' : C.islandBg;
+            let border = isSelected ? '#f5c542' : C.islandBorder;
             if (flashColor) {
                 bg = flashColor;
                 border = flashColor;
@@ -551,9 +586,9 @@ export class HashiRenderer {
                 ctx.shadowBlur = 0;
             }
 
-            let textColor = '#eef5ff';
+            let textColor = C.islandText;
             if (isSelected || flashColor) {
-                textColor = '#0b0e17';
+                textColor = C.islandTextOn;
             }
             const textSize = fontSize * 0.9;
             ctx.fillStyle = textColor;

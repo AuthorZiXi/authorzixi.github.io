@@ -4,7 +4,7 @@ import { DebugPanel } from './DebugPanel.js';
 import { hashString } from './utils.js';
 import { showToast } from './toast.js';
 
-export const APP_VERSION = '1.7.0';
+export const APP_VERSION = '1.7.1';
 
 
 // ================================================================
@@ -29,6 +29,7 @@ export class App {
         this.btnAux = document.getElementById('btnAux');
 
         this.debug = false;
+        this._initTheme();
         this._bindControls();
 
         const verEl = document.getElementById('versionText');
@@ -62,6 +63,40 @@ export class App {
         });
 
         this.debugPanel = new DebugPanel(this)
+    }
+
+    _initTheme() {
+        let theme = null;
+        try {
+            theme = localStorage.getItem('hashi-theme');
+        } catch (e) { /* 隐私模式可能抛异常 */ }
+        if (!theme) {
+            theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        }
+        this._applyTheme(theme);
+    }
+
+    _applyTheme(theme) {
+        this.theme = theme;
+        document.documentElement.dataset.theme = theme;
+        if (this.renderer) this.renderer.setTheme(theme);
+
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.content = theme === 'light' ? '#eef2f9' : '#0b0e17';
+
+        const btn = document.getElementById('btnTheme');
+        if (btn) {
+            btn.textContent = theme === 'light' ? '🌙' : '☀️';
+            btn.title = theme === 'light' ? '切换到深色' : '切换到浅色';
+        }
+    }
+
+    _toggleTheme() {
+        const next = this.theme === 'light' ? 'dark' : 'light';
+        try {
+            localStorage.setItem('hashi-theme', next);
+        } catch (e) { /* 忽略 */ }
+        this._applyTheme(next);
     }
 
     _bindControls() {
@@ -117,6 +152,9 @@ export class App {
         this.seedInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') this._generate(); });
         this.widthInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') this._generate(); });
         this.heightInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') this._generate(); });
+
+        // ===== 主题切换 =====
+        document.getElementById('btnTheme').addEventListener('click', () => this._toggleTheme());
 
         // ===== 菜单 & 信息卡片 & 调试面板 =====
         const menuPanel = document.getElementById('menuPanel');

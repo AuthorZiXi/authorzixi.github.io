@@ -14,6 +14,20 @@
     <meta name="apple-mobile-web-app-title" content="数桥">
 
     <title>数桥 · Hashiwokakero</title>
+
+    <!-- 提前决定主题，避免加载时闪一下 -->
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem('hashi-theme');
+                var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+                document.documentElement.dataset.theme = saved || (prefersLight ? 'light' : 'dark');
+            } catch (e) {
+                document.documentElement.dataset.theme = 'dark';
+            }
+        })();
+    </script>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -31,7 +45,10 @@
                 <img src="icons/192.png" alt="" class="logo-icon" />
                 <span class="logo-text">数桥 <em>Hashi</em></span>
             </div>
-            <button class="icon-btn" id="btnMenu" title="菜单" aria-label="菜单">☰</button>
+            <div class="topbar-actions">
+                <button class="icon-btn" id="btnTheme" title="切换主题" aria-label="切换主题">☀️</button>
+                <button class="icon-btn" id="btnMenu" title="菜单" aria-label="菜单">☰</button>
+            </div>
         </div>
 
         <!-- 菜单面板 -->
@@ -102,7 +119,7 @@
                 <span>源码: <a href="https://github.com/AuthorZiXi/authorzixi.github.io/" target="_blank">GitHub ·
                         hashi/</a></span>
                 <span><a href="privacy.html">隐私政策</a></span>
-                <span>2026/10/2</span>
+                <span>2026/10/6</span>
             </div>
         </div>
     </div>
